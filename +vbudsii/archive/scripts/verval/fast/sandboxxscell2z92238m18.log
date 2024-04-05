@@ -1,0 +1,625 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.7.12)  21 DEC 2011 13:13
+entering extended mode
+ %&-line parsing enabled.
+**sandboxxscell2z92238m18.tex
+(./sandboxxscell2z92238m18.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/minimal.cls
+Document Class: minimal 2001/05/25 Standard LaTeX minimal class
+) (/usr/share/texmf-texlive/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/share/texmf-texlive/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+))
+(/usr/share/texmf-texlive/tex/latex/sfmath/sfmath.sty
+Package: sfmath 2007/08/27 v0.8 sans serif maths
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/phv/m/n on input line 329.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/phv/bx/n on input line 330.
+\symSFMath=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `SFMath' in version `normal'
+(Font)                  OT1/phv/m/sl --> OT1/phv/m/sl on input line 343.
+LaTeX Font Info:    Overwriting symbol font `SFMath' in version `bold'
+(Font)                  OT1/phv/m/sl --> OT1/phv/bx/sl on input line 344.
+LaTeX Font Info:    Redeclaring math symbol \imath on input line 398.
+LaTeX Font Info:    Redeclaring math symbol \jmath on input line 399.
+\symSFMathUp=\mathgroup5
+LaTeX Font Info:    Overwriting symbol font `SFMathUp' in version `normal'
+(Font)                  OT1/phv/m/n --> OT1/phv/m/n on input line 406.
+LaTeX Font Info:    Overwriting symbol font `SFMathUp' in version `bold'
+(Font)                  OT1/phv/m/n --> OT1/phv/bx/n on input line 407.
+LaTeX Font Info:    Redeclaring math symbol \ldotp on input line 410.
+\symSFMathGreek=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `SFMathGreek' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 419.
+LaTeX Font Info:    Overwriting symbol font `SFMathGreek' in version `bold'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 420.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 422.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 423.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 424.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 425.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 426.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 427.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 428.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 429.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 430.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 431.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 432.
+\symSFMathUpGreek=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `SFMathUpGreek' in version `normal'
+
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 436.
+LaTeX Font Info:    Overwriting symbol font `SFMathUpGreek' in version `bold'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 437.
+LaTeX Font Info:    Overwriting math alphabet `\mathnormal' in version `normal'
+
+(Font)                  OML/cmm/m/it --> OT1/phv/m/sl on input line 446.
+LaTeX Font Info:    Overwriting math alphabet `\mathnormal' in version `bold'
+(Font)                  OML/cmm/b/it --> OT1/phv/bx/sl on input line 447.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/phv/m/n --> OT1/phv/m/n on input line 449.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/phv/bx/n --> OT1/phv/bx/n on input line 450.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/phv/bx/n on input line 452.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/phv/bx/n on input line 453.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/phv/m/sl on input line 455.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/phv/bx/sl on input line 456.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/phv/m/n on input line 458.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/phv/bx/n on input line 459.
+LaTeX Font Info:    Overwriting math alphabet `\mathsl' in version `bold'
+(Font)                  OT1/phv/m/sl --> OT1/phv/bx/sl on input line 466.
+)
+(/home/fitze/texmf/tex/latex/pgfplots/pgfplots.sty
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2011/07/29 v1.5 (git show 1.5-1-gcc2f2d2 )
+
+(/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks15
+)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2008/02/20 v2.00 (rcs-revision 1.21)
+))
+Package: pgf 2008/01/15 v2.00 (rcs-revision 1.12)
+
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count79
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+(/usr/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2008/02/07 v2.00 (rcs-revision 1.31)
+
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks16
+\pgfkeys@temptoks=\toks17
+)
+\pgf@x=\dimen104
+\pgf@y=\dimen105
+\pgf@xa=\dimen106
+\pgf@ya=\dimen107
+\pgf@xb=\dimen108
+\pgf@yb=\dimen109
+\pgf@xc=\dimen110
+\pgf@yc=\dimen111
+\c@pgf@counta=\count80
+\c@pgf@countb=\count81
+\c@pgf@countc=\count82
+\c@pgf@countd=\count83
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/01/13  (rcs-revision 1.6)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 885.
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2007/12/20  (rcs-revision 1.20)
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2007/12/17  (rcs-revision 1.8)
+)))
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/01/23  (rcs-revision 1.6)
+\pgfsyssoftpath@smallbuffer@items=\count84
+\pgfsyssoftpath@bigbuffer@items=\count85
+)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2008/01/15 v2.00 (rcs-revision 1.6)
+
+(/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex
+\pgfmath@box=\box26
+)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@stack=\toks18
+\c@pgfmath@parsecounta=\count86
+\c@pgfmath@parsecountb=\count87
+\c@pgfmath@parsecountc=\count88
+\pgfmath@parsex=\dimen112
+)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathoperations.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathtrig.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathrnd.code.tex))
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathbase.code.tex)))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2008/02/03  (rcs-revision 1.13)
+\pgf@picminx=\dimen113
+\pgf@picmaxx=\dimen114
+\pgf@picminy=\dimen115
+\pgf@picmaxy=\dimen116
+\pgf@pathminx=\dimen117
+\pgf@pathmaxx=\dimen118
+\pgf@pathminy=\dimen119
+\pgf@pathmaxy=\dimen120
+\pgf@xx=\dimen121
+\pgf@xy=\dimen122
+\pgf@yx=\dimen123
+\pgf@yy=\dimen124
+\pgf@zx=\dimen125
+\pgf@zy=\dimen126
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2008/02/13  (rcs-revision 1.14)
+\pgf@path@lastx=\dimen127
+\pgf@path@lasty=\dimen128
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/01/23  (rcs-revision 1.11)
+\pgf@shorten@end@additional=\dimen129
+\pgf@shorten@start@additional=\dimen130
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2008/01/15  (rcs-revision 1.26)
+\pgfpic=\box27
+\pgf@hbox=\box28
+\pgf@layerbox@main=\box29
+\pgf@picture@serial@count=\count89
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2007/12/12  (rcs-revision 1.8)
+\pgflinewidth=\dimen131
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2008/02/04  (rcs-revision 1.10)
+\pgf@pt@x=\dimen132
+\pgf@pt@y=\dimen133
+\pgf@pt@temp=\dimen134
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/01/23  (rcs-revision 1.7)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2007/06/07  (rcs-revision 1.8)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2007/12/10  (rcs-revision 1.9)
+\pgf@max=\dimen135
+\pgf@sys@shading@range@num=\count90
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgfexternal@startupbox=\box30
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2008/01/15  (rcs-revision 1.1)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2008/01/15  (rcs-revision 1.1)
+)))
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2008/02/13  (rcs-revision 1.4)
+\pgfnodeparttextbox=\box31
+\toks@savedmacro=\toks19
+)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgf@plotwrite=\write3
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.00 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen136
+\pgf@nodesepend=\dimen137
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.00 (rcs-revision 1.1)
+))
+(/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2007/11/07 v2.00 (rcs-revision 1.8)
+\pgffor@iter=\dimen138
+\pgffor@skip=\dimen139
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2008/02/13 v2.00 (rcs-revision 1.27)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2007/03/09 v2.00 (rcs-revision 1.9)
+\pgf@plot@mark@count=\count91
+\pgfplotmarksize=\dimen140
+)
+\tikz@lastx=\dimen141
+\tikz@lasty=\dimen142
+\tikz@lastxsaved=\dimen143
+\tikz@lastysaved=\dimen144
+\tikzleveldistance=\dimen145
+\tikzsiblingdistance=\dimen146
+\tikz@figbox=\box32
+\tikz@tempbox=\box33
+\tikztreelevel=\count92
+\tikznumberofchildren=\count93
+\tikznumberofcurrentchild=\count94
+\tikz@fig@count=\count95
+
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgfmatrixcurrentrow=\count96
+\pgfmatrixcurrentcolumn=\count97
+\pgf@matrix@numberofcolumns=\count98
+)
+\tikz@expandcount=\count99
+
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
+hs.code.tex
+File: tikzlibrarytopaths.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+))) (/home/fitze/texmf/tex/generic/pgfplots/pgfplots.code.tex
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks20
+\t@pgfplots@tokb=\toks21
+\t@pgfplots@tokc=\toks22
+\pgfplots@tmpa=\dimen147
+\c@pgfplots@coordindex=\count100
+\c@pgfplots@scanlineindex=\count101
+\r@pgfplots@reada=\read1
+
+(/home/fitze/texmf/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
+(/home/fitze/texmf/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loade
+r.code.tex
+Package pgfplots: loading complementary code for your PGF version...
+
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_misc.
+code.tex
+\w@pgf@writea=\write4
+\r@pgf@reada=\read2
+)
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfke
+ys.code.tex
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
+
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfke
+ysfiltered.code.tex
+\pgfkeys@tmptoks=\toks25
+))
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfma
+thfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count102
+)
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfli
+braryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.00 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count103
+\pgfplotmarksize=\dimen148
+)
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfli
+braryfpu.code.tex))
+(/home/fitze/texmf/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/home/fitze/texmf/tex/generic/pgfplots/liststructure/pgfplotsliststructure.cod
+e.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.
+code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count104
+)
+(/home/fitze/texmf/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count105
+\t@pgfplotstable@a=\toks26
+)
+(/home/fitze/texmf/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/util/pgfplotsbinary.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.cod
+e.tex
+\c@pgfplotslibrarysurf@no=\count106
+
+(/home/fitze/texmf/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfs
+ys-pdftex.def)))
+(/home/fitze/texmf/tex/generic/pgfplots/util/pgfplotscolormap.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex))
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.code.tex
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen149
+\pgfdecoratedremainingdistance=\dimen150
+\pgfdecoratedinputsegmentcompleteddistance=\dimen151
+\pgfdecoratedinputsegmentremainingdistance=\dimen152
+\pgf@decorate@distancetomove=\dimen153
+\pgf@decorate@repeatstate=\count107
+\pgfdecorationsegmentamplitude=\dimen154
+\pgfdecorationsegmentlength=\dimen155
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.pathmorphing.code.tex
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibrarydecorations.pathmorphing.
+code.tex))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.pathreplacing.code.tex
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibrarydecorations.pathreplacing
+.code.tex))
+\pgfplots@numplots=\count108
+\pgfplots@xmin@reg=\dimen156
+\pgfplots@xmax@reg=\dimen157
+\pgfplots@ymin@reg=\dimen158
+\pgfplots@ymax@reg=\dimen159
+\pgfplots@zmin@reg=\dimen160
+\pgfplots@zmax@reg=\dimen161
+)
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotm
+arks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2007/03/09 v2.00 (rcs-revision 1.5)
+)))
+(/usr/share/texmf/tex/latex/preview/preview.sty
+Package: preview 2010/02/14 11.86 (AUCTeX/preview-latex)
+
+(/usr/share/texmf/tex/latex/preview/prtightpage.def
+\PreviewBorder=\dimen162
+)
+\pr@snippet=\count109
+\pr@box=\box34
+\pr@output=\toks27
+)
+No file sandboxxscell2z92238m18.aux.
+\openout1 = `sandboxxscell2z92238m18.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 10.
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count110
+\scratchdimen=\dimen163
+\scratchbox=\box35
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen164
+\MPnumerator=\count114
+\everyMPtoPDFconversion=\toks29
+)
+Preview: Fontsize 10pt
+Preview: PDFoutput 1
+NOTE: coordinate (1Y1.0e-4],3Y0.0e0]) has been dropped because it is unbounded 
+(in y). 
+NOTE: coordinate (1Y1.2589e-4],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.5849e-4],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.9953e-4],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y2.5119e-4],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y3.1623e-4],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y3.9811e-4],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y5.0119e-4],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y6.3096e-4],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y7.9433e-4],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.0e-3],3Y0.0e0]) has been dropped because it is unbounded 
+(in y). 
+NOTE: coordinate (1Y1.2589e-3],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.5849e-3],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.9953e-3],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y2.5119e-3],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y3.1623e-3],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y3.9811e-3],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y5.0119e-3],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y6.3096e-3],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y7.9433e-3],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.0e-2],3Y0.0e0]) has been dropped because it is unbounded 
+(in y). 
+NOTE: coordinate (1Y1.2589e-2],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.5849e-2],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.9953e-2],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y2.5119e-2],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y3.1623e-2],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y3.9811e-2],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y5.0119e-2],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y6.3096e-2],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y7.9433e-2],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.0e-1],3Y0.0e0]) has been dropped because it is unbounded 
+(in y). 
+NOTE: coordinate (1Y1.2589e-1],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.5849e-1],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.9953e-1],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y2.5119e-1],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y3.1623e-1],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y3.9811e-1],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y5.0119e-1],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y6.3096e-1],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y7.9433e-1],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). 
+NOTE: coordinate (1Y1.0e0],3Y0.0e0]) has been dropped because it is unbounded (
+in y). 
+NOTE: coordinate (1Y1.2589e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y1.5849e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y1.9953e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y2.5119e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y3.1623e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y3.9811e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y5.0119e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y6.3096e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y7.9433e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y1.0e1],3Y0.0e0]) has been dropped because it is unbounded (
+in y). 
+NOTE: coordinate (1Y1.2589e1],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y1.5849e1],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y1.9953e1],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y2.5119e1],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y3.1623e1],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y3.9811e1],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y5.0119e1],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+NOTE: coordinate (1Y6.3096e1],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 261.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 261.
+
+Underfull \hbox (badness 2486) in paragraph at lines 261--261
+ []\OT1/phv/m/n/10 Energy (eV) 
+ []
+
+Preview: Tightpage -327680 -327680 327680 327680
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(./sandboxxscell2z92238m18.aux) ) 
+Here is how much of TeX's memory you used:
+ 14441 strings out of 495061
+ 345959 string characters out of 1182621
+ 476247 words of memory out of 3000000
+ 17368 multiletter control sequences out of 15000+50000
+ 10678 words of font info for 25 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 54i,18n,82p,683b,1616s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base
+/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/tex
+mf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on sandboxxscell2z92238m18.pdf (1 page, 27964 bytes).
+PDF statistics:
+ 22 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+

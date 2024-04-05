@@ -1,0 +1,528 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.7.12)  20 MAR 2012 16:39
+entering extended mode
+ %&-line parsing enabled.
+**\nonstopmode \input{"/home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mc
+npxsimplant/mcnpxsimplanterrortable.tex"}
+
+(/home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/mcnpxsimpl
+anterrortable.tex (/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf-texlive/tex/latex/geometry/geometry.sty
+Package: geometry 2008/12/21 v4.2 Page Geometry
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen105
+\Gm@wd@mp=\dimen106
+\Gm@odd@mp=\dimen107
+\Gm@even@mp=\dimen108
+\Gm@dimlist=\toks15
+
+(/usr/share/texmf-texlive/tex/xelatex/xetexconfig/geometry.cfg))
+(/home/fitze/texmf/tex/latex/pgfplots/pgfplots.sty
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2011/07/29 v1.5 (git show 1.5-1-gcc2f2d2 )
+
+(/home/fitze/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(/home/fitze/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(/home/fitze/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(/home/fitze/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks16
+)
+(/home/fitze/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box26
+
+(/usr/share/texmf-texlive/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/home/fitze/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+
+(/home/fitze/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(/home/fitze/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(/home/fitze/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+
+(/home/fitze/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
+
+(/home/fitze/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks19
+))
+\pgf@x=\dimen109
+\pgf@y=\dimen110
+\pgf@xa=\dimen111
+\pgf@ya=\dimen112
+\pgf@xb=\dimen113
+\pgf@yb=\dimen114
+\pgf@xc=\dimen115
+\pgf@yc=\dimen116
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count91
+\c@pgf@countb=\count92
+\c@pgf@countc=\count93
+\c@pgf@countd=\count94
+
+(/home/fitze/texmf/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+
+(/home/fitze/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+
+(/home/fitze/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(/home/fitze/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count95
+\pgfsyssoftpath@bigbuffer@items=\count96
+)
+(/home/fitze/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen117
+\pgfmath@count=\count97
+\pgfmath@box=\box27
+\pgfmath@toks=\toks20
+\pgfmath@stack@operand=\toks21
+\pgfmath@stack@operation=\toks22
+)
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex
+) (/home/fitze/texmf/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
+(/home/fitze/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count98
+))
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen118
+\pgf@picmaxx=\dimen119
+\pgf@picminy=\dimen120
+\pgf@picmaxy=\dimen121
+\pgf@pathminx=\dimen122
+\pgf@pathmaxx=\dimen123
+\pgf@pathminy=\dimen124
+\pgf@pathmaxy=\dimen125
+\pgf@xx=\dimen126
+\pgf@xy=\dimen127
+\pgf@yx=\dimen128
+\pgf@yy=\dimen129
+\pgf@zx=\dimen130
+\pgf@zy=\dimen131
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen132
+\pgf@path@lasty=\dimen133
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen134
+\pgf@shorten@start@additional=\dimen135
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box28
+\pgf@hbox=\box29
+\pgf@layerbox@main=\box30
+\pgf@picture@serial@count=\count99
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen136
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen137
+\pgf@pt@y=\dimen138
+\pgf@pt@temp=\dimen139
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen140
+\pgf@sys@shading@range@num=\count100
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box31
+))
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/home/fitze/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(/home/fitze/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box32
+)
+(/home/fitze/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(/home/fitze/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen141
+\pgf@nodesepend=\dimen142
+)
+(/home/fitze/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(/home/fitze/texmf/tex/latex/pgf/utilities/pgffor.sty
+(/home/fitze/texmf/tex/latex/pgf/utilities/pgfkeys.sty
+(/home/fitze/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/home/fitze/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen143
+\pgffor@skip=\dimen144
+\pgffor@stack=\toks23
+\pgffor@toks=\toks24
+))
+(/home/fitze/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(/home/fitze/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count101
+\pgfplotmarksize=\dimen145
+)
+\tikz@lastx=\dimen146
+\tikz@lasty=\dimen147
+\tikz@lastxsaved=\dimen148
+\tikz@lastysaved=\dimen149
+\tikzleveldistance=\dimen150
+\tikzsiblingdistance=\dimen151
+\tikz@figbox=\box33
+\tikz@tempbox=\box34
+\tikztreelevel=\count102
+\tikznumberofchildren=\count103
+\tikznumberofcurrentchild=\count104
+\tikz@fig@count=\count105
+
+(/home/fitze/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count106
+\pgfmatrixcurrentcolumn=\count107
+\pgf@matrix@numberofcolumns=\count108
+)
+\tikz@expandcount=\count109
+
+(/home/fitze/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopa
+ths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+))) (/home/fitze/texmf/tex/generic/pgfplots/pgfplots.code.tex
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks25
+\t@pgfplots@tokb=\toks26
+\t@pgfplots@tokc=\toks27
+\pgfplots@tmpa=\dimen152
+\c@pgfplots@coordindex=\count110
+\c@pgfplots@scanlineindex=\count111
+
+(/home/fitze/texmf/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
+(/home/fitze/texmf/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loade
+r.code.tex
+Package pgfplots: loading complementary code for your PGF version...
+
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_misc.
+code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfke
+ys.code.tex
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
+
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfke
+ysfiltered.code.tex
+\pgfkeys@tmptoks=\toks30
+))
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfma
+thfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count112
+)
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfli
+braryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count113
+\pgfplotmarksize=\dimen153
+)
+(/home/fitze/texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfli
+braryfpu.code.tex))
+(/home/fitze/texmf/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/home/fitze/texmf/tex/generic/pgfplots/liststructure/pgfplotsliststructure.cod
+e.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.
+code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count114
+)
+(/home/fitze/texmf/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count115
+\t@pgfplotstable@a=\toks31
+)
+(/home/fitze/texmf/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/util/pgfplotsbinary.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.cod
+e.tex
+\c@pgfplotslibrarysurf@no=\count116
+
+(/home/fitze/texmf/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfs
+ys-pdftex.def)))
+(/home/fitze/texmf/tex/generic/pgfplots/util/pgfplotscolormap.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex))
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex)
+(/home/fitze/texmf/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/home/fitze/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydeco
+rations.code.tex
+(/home/fitze/texmf/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen154
+\pgfdecoratedremainingdistance=\dimen155
+\pgfdecoratedinputsegmentcompleteddistance=\dimen156
+\pgfdecoratedinputsegmentremainingdistance=\dimen157
+\pgf@decorate@distancetomove=\dimen158
+\pgf@decorate@repeatstate=\count117
+\pgfdecorationsegmentamplitude=\dimen159
+\pgfdecorationsegmentlength=\dimen160
+)
+\tikz@lib@dec@box=\box35
+)
+(/home/fitze/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydeco
+rations.pathmorphing.code.tex
+(/home/fitze/texmf/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.
+pathmorphing.code.tex))
+(/home/fitze/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydeco
+rations.pathreplacing.code.tex
+(/home/fitze/texmf/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.
+pathreplacing.code.tex))
+\pgfplots@numplots=\count118
+\pgfplots@xmin@reg=\dimen161
+\pgfplots@xmax@reg=\dimen162
+\pgfplots@ymin@reg=\dimen163
+\pgfplots@ymax@reg=\dimen164
+\pgfplots@zmin@reg=\dimen165
+\pgfplots@zmax@reg=\dimen166
+)
+(/home/fitze/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplot
+marks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/home/fitze/texmf/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2010/10/15 v2.10 (rcs-revision 1.12)
+)))
+(/home/fitze/texmf/tex/latex/pgfplots/pgfplotstable.sty
+Package: pgfplotstable 2011/07/29 Part of pgfplots
+
+(/home/fitze/texmf/tex/generic/pgfplots/numtable/pgfplotstable.code.tex
+(/home/fitze/texmf/tex/generic/pgfplots/numtable/pgfplotstable.coltype.code.tex
+)) (/usr/share/texmf-texlive/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen167
+\extrarowheight=\dimen168
+\NC@list=\toks32
+\extratabsurround=\skip43
+\backup@length=\skip44
+))
+(/home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/mcnpxsimpl
+anterrortable.aux)
+\openout1 = `mcnpxsimplanterrortable.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+ (/usr/share/texmf/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count119
+\scratchdimen=\dimen169
+\scratchbox=\box36
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen170
+\MPnumerator=\count123
+\everyMPtoPDFconversion=\toks34
+)
+*geometry auto-detecting driver*
+*geometry detected driver: pdftex*
+-------------------- Geometry parameters
+paper: class default
+landscape: --
+twocolumn: --
+twoside: --
+asymmetric: --
+h-parts: 7.22743pt, 599.84013pt, 7.22743pt
+v-parts: 7.22743pt, 780.51512pt, 7.22743pt
+hmarginratio: --
+vmarginratio: --
+lines: --
+heightrounded: --
+bindingoffset: 0.0pt
+truedimen: --
+includehead: --
+includefoot: --
+includemp: --
+driver: pdftex
+-------------------- Page layout dimensions and switches
+\paperwidth  614.295pt
+\paperheight 794.96999pt
+\textwidth  599.84013pt
+\textheight 780.51512pt
+\oddsidemargin  -65.04256pt
+\evensidemargin -65.04256pt
+\topmargin  -102.04256pt
+\headheight 12.0pt
+\headsep    25.0pt
+\footskip   30.0pt
+\marginparwidth 65.0pt
+\marginparsep   11.0pt
+\columnsep  10.0pt
+\skip\footins  9.0pt plus 4.0pt minus 2.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
+
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
+ABD: EveryShipout initializing macros
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 36.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 36.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(/home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/mcnpxsimpl
+anterrortable.aux) ) 
+Here is how much of TeX's memory you used:
+ 16320 strings out of 495061
+ 394005 string characters out of 1182621
+ 497294 words of memory out of 3000000
+ 19211 multiletter control sequences out of 15000+50000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 64i,8n,74p,1257b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on mcnpxsimplanterrortable.pdf (1 page, 48736 bytes).
+PDF statistics:
+ 29 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+

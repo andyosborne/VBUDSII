@@ -1,0 +1,44 @@
+htfcss: ptmb7t  font-weight: bold;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+htfcss: cmbsy font-weight: bold;
+htfcss: cmbsy font-weight: bold;
+htfcss: cmbsy font-weight: bold;
+htfcss: ptmr7t font-family: monospace;
+File: fourcellfastreactor.4oo
+File: fourcellfastreactor.tmp
+File: fourcellfastreactor-settings.4os
+File: fourcellfastreactor-styles.4oy
+File: fourcellfastreactor-manifest.4of
+File: fourcellfastreactor-meta.4ot
+File: fourcellfastreactor0x.png.4og
+File: fourcellfastreactor1.tmp
+File: fourcellfastreactor1x.png.4og
+File: fourcellfastreactor1.tmp
+File: fourcellfastreactor2x.png.4og
+File: fourcellfastreactor1.tmp
+File: fourcellfastreactor3x.png.4og
+File: fourcellfastreactor1.tmp
+File: fourcellfastreactor.4od
+File: fourcellfastreactor.odt
+Font_Size: 12
+--- needs --- fourcellfastreactor.idv[1] ==> fourcellfastreactor0x.png ---
+--- needs --- fourcellfastreactor.idv[2] ==> fourcellfastreactor1x.png ---
+--- needs --- fourcellfastreactor.idv[3] ==> fourcellfastreactor2x.png ---
+--- needs --- fourcellfastreactor.idv[4] ==> fourcellfastreactor3x.png ---
+--- characters ---
+Font("cmex","10","10","100")
+Font("cmr","12","12","100")
+Font("ptmr7t","","10","120")
+Font("cmbsy","10","10","120")
+Font("cmbsy","8","8","100")
+Font("cmbsy","6","6","100")
+Font("cmr","8","8","100")
+Font("cmr","6","6","100")
+Font("cmmi","12","12","100")
+Font("cmmi","8","8","100")
+Font("cmmi","6","6","100")
+Font("cmsy","10","10","120")
+Font("cmsy","8","8","100")
+Font("cmsy","6","6","100")
+Font("ptmb7t","","10","120")

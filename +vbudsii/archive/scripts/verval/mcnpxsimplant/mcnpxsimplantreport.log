@@ -1,0 +1,331 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.7.12)  20 MAR 2012 16:39
+entering extended mode
+ %&-line parsing enabled.
+**\nonstopmode \input{"/home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mc
+npxsimplant/mcnpxsimplantreport.tex"}
+
+(/home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/mcnpxsimpl
+antreport.tex (/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf-texlive/tex/latex/geometry/geometry.sty
+Package: geometry 2008/12/21 v4.2 Page Geometry
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen105
+\Gm@wd@mp=\dimen106
+\Gm@odd@mp=\dimen107
+\Gm@even@mp=\dimen108
+\Gm@dimlist=\toks15
+
+(/usr/share/texmf-texlive/tex/xelatex/xetexconfig/geometry.cfg))
+(/usr/share/texmf-texlive/tex/latex/caption/caption.sty
+Package: caption 2009/10/09 v3.1k Customizing captions (AR)
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+\captionmargin=\dimen109
+\captionmargin@=\dimen110
+\captionwidth=\dimen111
+\caption@indent=\dimen112
+\caption@parindent=\dimen113
+\caption@hangindent=\dimen114
+)
+\c@ContinuedFloat=\count91
+)
+(/home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/mcnpxsimpl
+antreport.aux)
+\openout1 = `mcnpxsimplantreport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+ (/usr/share/texmf/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count92
+\scratchdimen=\dimen115
+\scratchbox=\box26
+\nofMPsegments=\count93
+\nofMParguments=\count94
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen116
+\MPnumerator=\count96
+\everyMPtoPDFconversion=\toks17
+)
+*geometry auto-detecting driver*
+*geometry detected driver: pdftex*
+-------------------- Geometry parameters
+paper: letterpaper
+landscape: --
+twocolumn: --
+twoside: --
+asymmetric: --
+h-parts: 36.135pt, 542.02501pt, 36.135pt
+v-parts: 72.26999pt, 650.43001pt, 72.26999pt
+hmarginratio: --
+vmarginratio: --
+lines: --
+heightrounded: --
+bindingoffset: 0.0pt
+truedimen: --
+includehead: --
+includefoot: --
+includemp: --
+driver: pdftex
+-------------------- Page layout dimensions and switches
+\paperwidth  614.295pt
+\paperheight 794.96999pt
+\textwidth  542.02501pt
+\textheight 650.43001pt
+\oddsidemargin  -36.135pt
+\evensidemargin -36.135pt
+\topmargin  -37.0pt
+\headheight 12.0pt
+\headsep    25.0pt
+\footskip   30.0pt
+\marginparwidth 44.0pt
+\marginparsep   10.0pt
+\columnsep  10.0pt
+\skip\footins  10.8pt plus 4.0pt minus 2.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
+
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 9.
+
+LaTeX Warning: No \author given.
+
+<figs/mcnpxsimplantflux1.pdf, id=1, 442.47609pt x 225.13008pt>
+File: figs/mcnpxsimplantflux1.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantflux1.pdf>
+<figs/mcnpxsimplantflux1vbudsi.pdf, id=2, 442.47609pt x 225.13109pt>
+File: figs/mcnpxsimplantflux1vbudsi.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantflux1vbudsi.pdf> [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/fitze/Dropbox/UTA/r/
+code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantflux1.pdf>]
+<figs/mcnpxsimplantflux1vbudsi2.pdf, id=36, 442.47609pt x 225.13008pt>
+File: figs/mcnpxsimplantflux1vbudsi2.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantflux1vbudsi2.pdf>
+<figs/mcnpxsimplantxscell1.pdf, id=37, 441.84773pt x 220.90129pt>
+File: figs/mcnpxsimplantxscell1.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell1.pdf> [2 </home/fitze/Dropbox/UTA/r/code/vbudsii/
+scripts/verval/mcnpxsimplant/figs/mcnpxsimplantflux1vbudsi.pdf> </home/fitze/Dr
+opbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantflux1vb
+udsi2.pdf>]
+<figs/mcnpxsimplantxscell1z222.pdf, id=73, 441.84773pt x 220.90129pt>
+File: figs/mcnpxsimplantxscell1z222.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell1z222.pdf>
+<figs/mcnpxsimplantxscell1z222m1.pdf, id=74, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell1z222m1.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell1z222m1.pdf> [3 </home/fitze/Dropbox/UTA/r/code/vb
+udsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantxscell1.pdf> </home/fitze/
+Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantxscel
+l1z222.pdf>]
+<figs/mcnpxsimplantxscell1z222m2.pdf, id=98, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell1z222m2.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell1z222m2.pdf>
+<figs/mcnpxsimplantxscell1z222m102.pdf, id=99, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell1z222m102.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell1z222m102.pdf> [4 </home/fitze/Dropbox/UTA/r/code/
+vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantxscell1z222m1.pdf> </hom
+e/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimpl
+antxscell1z222m2.pdf>]
+<figs/mcnpxsimplantxscell2.pdf, id=123, 441.84773pt x 220.90129pt>
+File: figs/mcnpxsimplantxscell2.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2.pdf>
+<figs/mcnpxsimplantxscell2z92235.pdf, id=124, 441.84773pt x 220.90129pt>
+File: figs/mcnpxsimplantxscell2z92235.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z92235.pdf> [5 </home/fitze/Dropbox/UTA/r/code/vb
+udsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantxscell1z222m102.pdf> </hom
+e/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimpl
+antxscell2.pdf>]
+<figs/mcnpxsimplantxscell2z92235m1.pdf, id=148, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell2z92235m1.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z92235m1.pdf>
+<figs/mcnpxsimplantxscell2z92235m2.pdf, id=149, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell2z92235m2.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z92235m2.pdf> [6 </home/fitze/Dropbox/UTA/r/code/
+vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantxscell2z92235.pdf> </hom
+e/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimpl
+antxscell2z92235m1.pdf>]
+<figs/mcnpxsimplantxscell2z92235m102.pdf, id=173, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell2z92235m102.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z92235m102.pdf>
+<figs/mcnpxsimplantxscell2z92235m18.pdf, id=174, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell2z92235m18.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z92235m18.pdf> [7 </home/fitze/Dropbox/UTA/r/code
+/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantxscell2z92235m2.pdf> </
+home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsi
+mplantxscell2z92235m102.pdf>]
+<figs/mcnpxsimplantxscell2z92238.pdf, id=199, 441.84773pt x 220.90129pt>
+File: figs/mcnpxsimplantxscell2z92238.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z92238.pdf>
+<figs/mcnpxsimplantxscell2z92238m1.pdf, id=200, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell2z92238m1.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z92238m1.pdf> [8 </home/fitze/Dropbox/UTA/r/code/
+vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantxscell2z92235m18.pdf> </
+home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsi
+mplantxscell2z92238.pdf>]
+<figs/mcnpxsimplantxscell2z92238m2.pdf, id=224, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell2z92238m2.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z92238m2.pdf>
+<figs/mcnpxsimplantxscell2z92238m102.pdf, id=225, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell2z92238m102.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z92238m102.pdf> [9 </home/fitze/Dropbox/UTA/r/cod
+e/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantxscell2z92238m1.pdf> <
+/home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxs
+implantxscell2z92238m2.pdf>]
+<figs/mcnpxsimplantxscell2z92238m18.pdf, id=249, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell2z92238m18.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z92238m18.pdf>
+<figs/mcnpxsimplantxscell2z8016.pdf, id=250, 441.84773pt x 220.90129pt>
+File: figs/mcnpxsimplantxscell2z8016.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z8016.pdf> [10 </home/fitze/Dropbox/UTA/r/code/vb
+udsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantxscell2z92238m102.pdf> </h
+ome/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsim
+plantxscell2z92238m18.pdf>]
+<figs/mcnpxsimplantxscell2z8016m1.pdf, id=274, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell2z8016m1.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z8016m1.pdf>
+<figs/mcnpxsimplantxscell2z8016m2.pdf, id=275, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell2z8016m2.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z8016m2.pdf> [11 </home/fitze/Dropbox/UTA/r/code/
+vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantxscell2z8016.pdf> </home
+/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimpla
+ntxscell2z8016m1.pdf>]
+<figs/mcnpxsimplantxscell2z8016m102.pdf, id=299, 441.84773pt x 266.84091pt>
+File: figs/mcnpxsimplantxscell2z8016m102.pdf Graphic file (type pdf)
+
+<use figs/mcnpxsimplantxscell2z8016m102.pdf> [12 </home/fitze/Dropbox/UTA/r/cod
+e/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsimplantxscell2z8016m2.pdf> </
+home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/figs/mcnpxsi
+mplantxscell2z8016m102.pdf>]
+<mcnpxsimplanterrortable.pdf, id=323, 614.295pt x 794.97pt>
+File: mcnpxsimplanterrortable.pdf Graphic file (type pdf)
+
+<use mcnpxsimplanterrortable.pdf>
+Overfull \hbox (89.8933pt too wide) in paragraph at lines 62--63
+[][] 
+ []
+
+[13]
+Overfull \vbox (144.53806pt too high) has occurred while \output is active []
+
+
+[14 </home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/mcnpxs
+implanterrortable.pdf>]
+(/home/fitze/Dropbox/UTA/r/code/vbudsii/scripts/verval/mcnpxsimplant/mcnpxsimpl
+antreport.aux) ) 
+Here is how much of TeX's memory you used:
+ 2372 strings out of 495061
+ 41341 string characters out of 1182621
+ 97981 words of memory out of 3000000
+ 5557 multiletter control sequences out of 15000+50000
+ 6539 words of font info for 24 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 37i,6n,38p,404b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/font
+s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/shar
+e/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/f
+onts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on mcnpxsimplantreport.pdf (14 pages, 336715 bytes).
+PDF statistics:
+ 373 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+

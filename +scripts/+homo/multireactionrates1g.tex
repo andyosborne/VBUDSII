@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage{booktabs}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tabular}
+\setlength\PreviewBorder{5pt}
+\begin{document}
+\footnotesize\begin{tabular}{llrrr}\toprule
+nuclide & reaction & MCNPX & CPM & error (\%)\\ 
+\midrule
+U-235 & fission & 1675 & 1662 & -0.78\\ 
+\cmidrule{2-5}
+ & capture & 516 & 525 & 1.74\\ 
+\cmidrule{1-5}
+U-238 & fission & 4272 & 4089 & -4.28\\ 
+\cmidrule{2-5}
+ & capture & 32611 & 32314 & -0.91\\ 
+\cmidrule{1-5}
+Pu-239 & fission & 36187 & 32715 & -9.59\\ 
+\cmidrule{2-5}
+ & capture & 10720 & 9679 & -9.71\\ 
+\cmidrule{1-5}
+Pu-240 & fission & 0 & 6319 & -\\ 
+\cmidrule{2-5}
+ & capture & 10083 & 8896 & -11.77\\ 
+\bottomrule\end{tabular}\end{document}

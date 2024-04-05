@@ -1,0 +1,46 @@
+function s0 = CalculateS0(L, p, r, Cell, cellidx, zaididx, PI, cell2piIdxs)
+
+% The probability of leaving this cell. Should also be 1 -
+% PI(cellidx,cellidx,:)
+% Get rid of "2", it doesn't mean anything: outgoing?
+%PIsum = zeros(p.nFineGroups,1);
+%for cellidx2 = 1:r.nCells
+%    if cellidx2 ~= cellidx
+%        % MAKE SURE THAT GEOFF'S MATRIX IS CELLIDX->CELLIDX2
+%        PIsum = PIsum + squeeze( PI(cellidx,cellidx2,:) );
+%    end
+%end
+
+piidx = cell2piIdxs(cellidx);
+% Probability of leaving this cell.
+<<<<<<< HEAD
+probLeaving = ones(p.nFineGroups, 1) - squeeze(PI(cellidx, cellidx, :));
+=======
+probLeaving = ones(p.nFineGroups, 1) - squeeze(PI(piidx, piidx, :));
+>>>>>>> 751c5e66e2e5c2c2ccc459dc345fcd847d75f92e
+
+if isfield(p, 'transportfortotal') && p.transportfortotal
+    mtToUse = 8;
+else
+    mtToUse = 7;
+end
+xsMacroEscape = probLeaving ./ ...
+    ( 1 - probLeaving ) .* Cell(cellidx).fine(L.MT(mtToUse)).value;
+
+% heterogeneous part
+es0 = xsMacroEscape; %Cell(cellidx).numDensities(zaididx);
+
+% homogeneous part
+% do I want to use cross sections from Cell or from L here?
+% s0 = s0 + Cell(cellidx).fine(L.MT(7)).value -
+% L.z(L.ZAID(zaid)).m(L.MT(7)).xs * Cell(cellidx).numDensities(zaididx)
+for zaididx2 = 1:length(Cell(cellidx).ZAIDs)
+    if zaididx2 ~= zaididx
+        es0 = es0 + Cell(cellidx).fine(L.MT(mtToUse)).z(zaididx2).s ...
+            * Cell(cellidx).numDensities(zaididx2);
+    end
+end
+
+es0 = es0 / Cell(cellidx).numDensities(zaididx);
+
+s0 = log10(es0);

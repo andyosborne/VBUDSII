@@ -1,0 +1,14 @@
+function Ri = Bateman(p, r, Ri)
+
+
+for cellidx = 1:r.nCells
+    for mt = p.myMTs
+        if mt ~= 2
+            mt
+            Ri.Cell(cellidx).fine(p.myMT(mt)).RR = ...
+                sum(Ri.Cell(cellidx).fine(p.myMT(mt)).value .*...
+                    Ri.Cell(cellidx).spectralFlux);
+            
+        end
+    end
+end

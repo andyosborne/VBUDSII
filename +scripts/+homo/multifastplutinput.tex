@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage{booktabs}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+\usepackage{siunitx}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tabular}
+\setlength\PreviewBorder{5pt}
+\usepackage{sfmath}
+\def\imagetop#1{\vtop{\null\hbox{#1}}}
+\begin{document}
+\footnotesize
+\begin{tabular}{cc}
+\textbf{Pin cells}
+ & \textbf{Annular cells}
+\\ 
+\imagetop{
+\begin{tabular}{lr}
+\toprule
+\multicolumn{2}{c}{\textbf{HEU}}\\ 
+diam. & 0.8000 cm\\ 
+temp. & 294.0 K\\ 
+\midrule
+nuclide & $\mathsf{N}$ (\#/b/cm$\mathsf{^{2}}$)\\ 
+\cmidrule(lr){1-1}
+\cmidrule(lr){2-2}
+U-235 & \num[round-precision=5,round-mode=figures,scientific-notation=true]{0.0056642}\\ 
+U-238 & \num[round-precision=5,round-mode=figures,scientific-notation=true]{0.0226040}\\ 
+O-16 & \num[round-precision=5,round-mode=figures,scientific-notation=true]{0.0466240}\\ 
+\bottomrule
+ & \\ 
+\toprule
+\multicolumn{2}{c}{\textbf{PuO$_2$}}\\ 
+diam. & 0.8000 cm\\ 
+temp. & 294.0 K\\ 
+\midrule
+nuclide & $\mathsf{N}$ (\#/b/cm$\mathsf{^{2}}$)\\ 
+\cmidrule(lr){1-1}
+\cmidrule(lr){2-2}
+Pu-239 & \num[round-precision=5,round-mode=figures,scientific-notation=true]{0.0255595}\\ 
+O-16 & \num[round-precision=5,round-mode=figures,scientific-notation=true]{0.0511191}\\ 
+\bottomrule
+\end{tabular}
+}
+ & \imagetop{
+\begin{tabular}{lr}
+\toprule
+\multicolumn{2}{c}{\textbf{HEU sodium}}\\ 
+pitch & 1.2000 cm\\ 
+temp. & 294.0 K\\ 
+\midrule
+nuclide & $\mathsf{N}$ (\#/b/cm$\mathsf{^{2}}$)\\ 
+\cmidrule(lr){1-1}
+\cmidrule(lr){2-2}
+Na-23 & \num[round-precision=5,round-mode=figures,scientific-notation=true]{0.0231114}\\ 
+\bottomrule
+ & \\ 
+\toprule
+\multicolumn{2}{c}{\textbf{PuO$_2$ sodium}}\\ 
+pitch & 1.2000 cm\\ 
+temp. & 294.0 K\\ 
+\midrule
+nuclide & $\mathsf{N}$ (\#/b/cm$\mathsf{^{2}}$)\\ 
+\cmidrule(lr){1-1}
+\cmidrule(lr){2-2}
+Na-23 & \num[round-precision=5,round-mode=figures,scientific-notation=true]{0.0231114}\\ 
+\bottomrule
+\end{tabular}
+}
+\end{tabular}
+\end{document}

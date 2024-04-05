@@ -1,0 +1,16 @@
+serpentcompare 20120424T215230 
+C cell cards
+C --- universe 1 --- 
+10 100 -11.0000 -1 u=1 imp:n=1 vol=1.4800e+00 tmp=7.7553e-08
+20 200 -0.8820 1 u=1 imp:n=1 vol=2.5200e+00 tmp=5.1702e-08
+C --- real world ---
+60 0 -2 fill=1 lat=1 imp:n=1
+
+C surface cards
+1 cz 0.6864
+2 rpp -1.0000 1.0000 -1.0000 1.0000 0. 0.
+
+C data cards
+kcode 2000 1.0 50 100
+ksrc 0.0 0.0 0.0
+m100

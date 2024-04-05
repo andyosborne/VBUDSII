@@ -1,0 +1,979 @@
+function [Meta, L, p] = FarmXS(p)
+% TODO:
+%   1- Allow for other s0's. 'infinite dilution'
+
+  % BOOLEAN TO SHOW ONLY ERRORS OR TO ALSO SHOW ALL NEWS.
+  % IF IGNstr IS NOT '1', THEN MUST AVOID USING L.GROUPDEF, L.NGRUPS,
+  % P.P.NGROUPS
+
+
+if exist([p.metamat '.mat'],'file') == 2
+    load(p.metamat);
+end
+
+L = 0;
+p.fnames = {'tape20', 'script', 'output'};
+
+tic;
+
+% explore: read down the available ENDF/B files from the internet.
+if p.explore == 1
+    Meta = Explore(p);
+end
+
+% mine: pull down ENDF/B text files from the internet.
+if p.mine == 1
+    Meta = Mine(p, Meta);
+end
+
+% plant: plant NJOY scripts.
+if p.plant == 1
+    Meta = Plant(p, Meta);
+end
+
+% fertilize: run NJOY scripts and create NJOY output files.
+if p.fertilize == 1
+    [Meta, fileStatuses] = Fertilize(p, Meta);
+end
+
+% harvest: run MATLAB on NJOY output files to provide cross sections for
+% human consumption.
+if p.harvest == 1
+    [Meta, L] = Harvest(p, Meta);
+end
+
+fprintf('Runtime: %.2f seconds\n',toc);
+p.metamat
+save(p.metamat,'Meta');
+
+end
+
+function Meta = Explore(p)
+%MINE obtains information about ENDF/B files, and downloads ENDF/B files. This
+%function does not have anything to do with NJOY.
+
+if p.verbose
+    disp('[FarmXS/Explore]: Entering.');
+end
+
+if p.e.searchWeb
+   urlwrite('http://t2.lanl.gov/cgi-bin/nuclides/endind','current.html');
+end
+
+fid = fopen('current.html');
+
+if fid == -1
+    error(['ERROR: html file current.html is not in the current directory.'...
+        ' Set p.e.searchWeb to 1.']);
+end
+
+Meta = struct('MAT',[],...
+              'isIsomer',[],...
+              't2name',[],...
+              'numProtons',[],...
+              'element',[],...
+              'atomNum',[],...
+              'ZAID',[],...
+              'webPath',[],...
+              'nuclideStr',[],...
+              'storagePath',[],...
+              'writeStatus',[],...
+              'isFissionable',[],...
+              'maxInelasticMT',[],...
+              'fileStatus',[]);
+
+% Line number. EDIT.
+m = 0;
+
+%% Obtain meta data about all the ENDF/B files listed.
+while ~feof(fid)
+    fline = fgetl(fid);
+    if strcmp(fline(1:2),'<A')
+        % Line contains a URL, and so it contains info for an ENFB/F file.
+
+        m = m + 1;
+
+        % Index of the first character of the string for the filename of
+        % the webpage where the ENFB/F file is located.
+        zidx1 = strfind(fline,'?') + 1;
+
+        % Index of the last character.
+        zidx2 = strfind(fline,'">') - 1;
+
+        if m > 1 && ...
+            str2num( fline(zidx2 + 9: zidx2 + 14)) == Meta(m-1).MAT &&...
+            strcmp( fline( zidx2 + 26), 'M') == Meta(m-1).isIsomer
+            % The current file is for the same nuclide; go back one line and
+            % use this file instead of the previous one. Files are ordered from
+            % oldest to newest, so this ensures that the newest file for each
+            % nuclide is used.
+            m = m - 1;
+        end
+
+        % Extract, for this ENDF/B file, meta data about this file.
+
+        % t2.lanl.gov name for the file.
+        Meta(m).t2name = fline(zidx1:zidx2);
+
+        % ENDF/B mat number for the file.
+        Lidx = zidx2 + 9; Ridx = Lidx + 5;
+        Meta(m).MAT = str2num( fline(Lidx:Ridx));
+
+        % Proton number for the file.
+        Lidx = zidx2 + 16; Ridx = Lidx + 2;
+        Meta(m).numProtons = str2num( fline(Lidx:Ridx) );
+
+        % Element name for the file.
+        Lidx = zidx2 + 20; Ridx = Lidx + 1;
+        Meta(m).element = strtrim( fline(Lidx:Ridx) );
+
+        % Atomic number for the file.
+        Lidx = zidx2 + 23; Ridx = Lidx + 2;
+        Meta(m).atomNum = str2num( fline(Lidx:Ridx) );
+
+        % Isomer index for the file.
+        Lidx = zidx2 + 26;
+        Meta(m).isIsomer = strcmp( fline(Lidx), 'M' );
+
+        % ZAID for the file.
+        % Get the correct number of zeros.
+        prezaid = num2str(10^(3 - length(num2str(Meta(m).atomNum))));
+        Meta(m).ZAID = str2num([num2str(Meta(m).numProtons) prezaid(2:end)...
+            num2str(Meta(m).atomNum)]);
+
+        % IF THIS ZAID MATCHES A REQUESTED ZAID, PUT IT INTO A SEPARATE LIST.
+
+        % Obtain the web addresses of the ENDF/B files.
+        if Meta(m).atomNum == 0
+            % This file is for the naturally-occuring nuclide, not a specific
+            % isotope.
+            % Index of the last character of the URL
+            urlidx = strfind( Meta(m).t2name, 'nat') - 1;
+        else
+            urlidx = strfind( Meta(m).t2name, int2str( Meta(m).atomNum )) - 1;
+        end
+        % The webpath contains a directory name, then a file name. The directory
+        % name is just the element abbreviation, but with the first letter
+        % capitalized and the subsequent letters as lower case. After the slash
+        % is the atomic number (or nata / natf for files for natural nuclides).
+        Meta(m).webPath = ['http://t2.lanl.gov/data/data/ENDFB-VI-neutron/'...
+                           Meta(m).element(1) Meta(m).t2name(2:urlidx) ...
+                           '/' ...
+                           Meta(m).t2name(urlidx + 1:end)];
+
+        Meta(m).nuclideStr = [Meta(m).element '_' num2str(Meta(m).atomNum)];
+        if Meta(m).isIsomer
+            Meta(m).nuclideStr = [Meta(m).nuclideStr 'm'];
+        end
+        % DEAL WITH ISOMERS. EDIT.
+        % IS ISOTOPE ON THE FISSILE LIST? EDIT.
+    end
+end
+
+% bound materials EDIT.
+
+% Close current.html.
+fclose(fid);
+
+if p.verbose
+    disp('[FarmXS/Explore]: Leaving.');
+end
+
+end
+
+function Meta = Mine(p, Meta)
+% Download ENDF/B files, for the ZAIDs requested, in the p.address folder.
+
+if p.verbose
+    disp('[FarmXS/Mine]: Entering.');
+end
+
+mainidxs = MapZAIDs(Meta, p.ZAIDs);
+
+for m = mainidxs % EDIT.
+    Meta(m).storagePath = fullfile(p.address, Meta(m).nuclideStr);
+
+    if p.m.downloadTape20s
+
+        if ~isdir(Meta(m).storagePath)
+            mkdir(Meta(m).storagePath)
+            disp(['[FarmXS/Mine]: Created a new directory for ' ...
+                Meta(m).nuclideStr ' ZAID ' num2str(Meta(m).ZAID)]);
+        end
+
+        [F, status] = urlwrite(Meta(m).webPath, ...
+                                  fullfile(Meta(m).storagePath, ...
+                                  'tape20'));
+
+        % If there was no error downloading the file, status = 0.
+        Meta(m).writeStatus = status;
+
+        if status ~= 1
+            disp(['WARNING [FarmXS/Mine]: ' Meta(m).nuclideStr ', ZAID '...
+                  num2str(Meta(m).ZAID) ': URLWRITE error code ' ...
+                  num2str(status)]);
+        end
+
+    else
+
+        Meta(m).writeStatus = .5*exist(fullfile(Meta(m).storagePath, 'tape20'));
+
+    end
+
+    [Meta(m).isFissionable, Meta(m).maxInelasticMT] = ...
+        GetMFMTs( Meta(m).storagePath, Meta(m).writeStatus);
+
+end
+
+% List the files that failed to download.
+
+if p.verbose
+    disp('[FarmXS/Mine]: Leaving.');
+end
+
+end
+
+
+function Meta = Plant(p, Meta)
+
+if p.verbose
+    disp('[FarmXS/Plant]: Entering.');
+end
+
+nTs = length(p.p.Ts);
+nS0s = length(p.p.S0s);
+
+% Error check input
+
+p.p.IGNstr = num2str(p.p.IGNstr);
+p.p.IWTstr = num2str(p.p.IWTstr);
+
+maxNJOYGroups = 500;
+
+if ~strcmp(p.p.IGNstr, '1') && (length(p.p.groupDef)-1) > maxNJOYGroups
+    % Eventually automate the creation of multiple scripts.
+    error(['ERROR [FarmXS/Plant]: current number of groups is ' ...
+        num2str(length(p.p.groupDef)-1) ', maximum number of groups '...
+        'per script is ' num2str(maxNJOYGroups) '. ' ...
+        'Break run into multiple scripts']);
+end
+
+mainidxs = MapZAIDs(Meta, p.ZAIDs); % Call this every time?
+
+
+for m = mainidxs % EDIT.
+    % Inspect comment section of ENDF/B file to update Fissile and
+    % maxinelastic. EDIT.
+    % THIS FUNCTION SHOULD REALLY BE INCORPORATED INTO EXPLORE.
+
+    % DEAL WITH THE FACT THAT WATER IS AVAILABLE AT ONLY CERTAIN TEMPERATURES.
+
+    % Select MFMTs.
+
+    MFMTs = p.p.MFMTs;
+    
+    % Write the NJOY script!
+    if Meta(m).writeStatus ~= 1
+        disp(['WARNING [FarmXS/Plant]: Not generating a script for ' ...
+            Meta(m).nuclideStr ' ZAID ' num2str(Meta(m).ZAID) ...
+              ' because of a write error.']);
+    else
+        fid = fopen( fullfile(p.address, Meta(m).nuclideStr,...
+            'script'),'wt');
+
+        MATstr = int2str(Meta(m).MAT);
+        Tstr = strtrim( sprintf('%d ', p.p.Ts));
+        nTstr = int2str(nTs);
+        % THIS LINE HERE IS PROBABLY NOT OKAY FOR NJOY NUMBER INPUTS. EDIT.
+        S0str = strtrim( sprintf('%1.1e ', p.p.S0s));
+        nS0str = int2str(nS0s);
+
+        fprintf(fid,[...
+        ' moder \n' ... % MODER - converts tape20 to binary
+        ' 20 -21/ \n' ... % input, output tape number
+        ' reconr \n' ... % RECONR
+        ' -21 -22/ \n' ... % input, output tape number
+        ' ''pendf file''/ \n' ... % label
+        ' ' MATstr ' 1/ \n' ... % ENDF/B mat, # cards
+        ' .05/ \n' ... % tolerance
+        ' ''<pendf>-file''/ \n' ... % label
+        ' 0/ \n' ... % end RECONR
+        ' broadr \n' ... % BROADR
+        ' -21 -22 -23/ \n' ... %input, input, output
+        ' ' MATstr ' ' nTstr '/ \n' ... % ENDF/B mat, # temps
+        ' .005/ \n' ... % tolerance (thinning)
+        ' ' Tstr '/ \n' ... % temperatures (Kelvin)
+        ' 0/ \n' ... % terminate BROADR
+        ' unresr \n' ... % UNRESR
+        ' -21 -23 -24/ \n' ... % input, input, output
+        ' ' MATstr ' ' nTstr ' ' nS0str ' 1/ \n' ... % # temps, # S0s
+        ' ' Tstr '/ \n' ... % temperatures (Kelvin)
+        ' ' S0str '/ \n' ... % S0s (cm^{-1})
+        ' 0/ \n' ... % terminate UNRESR
+        ' thermr \n' ... % THERMR
+        ' 0 -24 -25/ \n' ... % ENDF input, PENDF input, output
+        ...   % (ENDF not needed)
+        ' 0 ' MATstr ' 16 ' nTstr ' 1 0 1 221 1/ \n' ...
+        ...   % ENDF mat, PENDF mat, # angles, # temps, inelastic,
+        ...   % elastic, nAtoms, inelasticMT, verbose
+        ' ' Tstr '/ \n' ... % temperatures (Kelvin)
+        ' .001 10./ \n' ... % tolerance, max energy for thermal treatment
+        ' groupr \n' ... % GROUPR
+        ' 20 -25 0 -26/ \n' ... % ENDF input, PENDF input, NGOUT1, NGOUT2
+        ' ' MATstr ' ' p.p.IGNstr ' 0 ' p.p.IWTstr ' 0 ' nTstr ' ' nS0str '/ \n' ...
+        ...   % ENDF mat, IGN (groupdef), IGG (gamma), IWT (weight),
+        ...   % Legendre order, # temps, # S0s
+        ' ''Group constants''/ \n' ... % label
+        ' ' Tstr '/ \n' ... % temperatures (Kelvin)
+        ' ' S0str '/ \n']); % S0s (cm^{-1})
+        if strcmp(p.p.IGNstr,'1')
+            % Using our own group structure. p.p.groupDef must be defined.
+            fprintf(fid,[' ' int2str(length(p.p.groupDef)-1) '/ \n']); % nGroups
+            fprintf(fid, '%1.8f ', p.p.groupDef); % print groupDef
+            fprintf(fid, '/ \n'); % End groupDef line.
+        end
+
+        if ~Meta(m).isFissionable
+            % Do not find MTs related to only fissionable isotopes.
+            if find(MFMTs == 18)
+                [rowidx colidx] = find(MFMTs == 18);
+                MFMTs = MFMTs([1:rowidx-1 rowidx+1:end], :);
+            end
+            if find(MFMTs == 452)
+                [rowidx colidx] = find(MFMTs == 452);
+                MFMTs = MFMTs([1:rowidx-1 rowidx+1:end], :);
+            end
+        end
+
+        for tempidx = 1:nTs
+
+            % Get all MF = 3 cross sections.
+            % fprintf(fid,' 3 / \n');
+            fprintf(fid,' %d %d / \n',MFMTs');
+            %fprintf(fid,' 3 251 / \n');
+            %if Meta(m).numProtons >= 92 % shouldn't this be the other way? EDIT
+            %    fprintf(fid,' 3 452 / \n');
+            %end
+            % Get all MF = 6 cross sections.
+            % fprintf(fid, ' 6 / \n');
+            fprintf(fid,' 0/ \n');
+        end
+        fprintf(fid,[...
+            ' 0/ \n' ... % terminate THERMR
+            ' moder \n' ... % MODER converts back from binary
+            ' -26 27/ \n' ... % input, output
+            ' stop \n' ... % terminate NJOY
+            'EOF \n']); % end of file marker
+        fclose(fid);
+
+        if Meta(m).isFissionable
+            fissString = '';
+        else
+            fissString = 'non-';
+        end
+        
+        if p.verbose
+            fprintf(['[FarmXS/Plant]: Script written for ' ...
+                '%sfissile nuclide %s ZAID %d\n'],...
+                fissString, Meta(m).nuclideStr, Meta(m).ZAID);
+        end
+
+    end
+end
+
+% bound materials EDIT.
+
+if p.verbose
+    disp('[FarmXS/Plant]: Leaving.');
+end
+
+end
+
+function [Meta, fileStatuses]= Fertilize(p, Meta)
+
+if p.verbose
+    disp('[FarmXS/Fertilize]: Entering.');
+end
+
+% change the size of this?
+nFilesPerNuclide = 4;
+fileStatuses = zeros(length(Meta), nFilesPerNuclide);
+
+disp('[FarmXS/Fertilize]: Running NJOY.');
+
+fnames = p.fnames;
+
+mainidxs = MapZAIDs(Meta, p.ZAIDs); % Call this every time?
+
+for m = mainidxs
+
+    if p.verbose
+        disp(['[FarmXS/Fertilize]: Running NJOY on ' Meta(m).nuclideStr '.']);
+    end
+
+    for i = 1:length(fnames)
+        Meta(m).fileStatus(i) = exist([Meta(m).storagePath filesep fnames{i}]);
+    end
+
+    if Meta(m).writeStatus ~= 1 || min(Meta(m).fileStatus(1:2)) == 0
+        % Files don't exist to run NJOY
+        Meta(m).fileStatus(4) = -1;
+
+        %disp(['WARNING [FarmXS/Fertilize]: ' Meta(m).nuclideStr ...
+        %    ' missing the file ' ...
+        %    fnames{find(Meta(m).fileStatus(1:2) == 0)} '.']);
+        disp(['WARNING [FarmXS/Fertilize]: ' Meta(m).nuclideStr ...
+            ' is being skipped because of a file error.']);
+
+    elseif Meta(m).fileStatus(3) == 2 && p.f.overwriteOutput == 0
+
+        if p.verbose
+            disp(['[FarmXS/Fertilize]: ' Meta(m).nuclideStr ...
+               ' output exists. Skipping file.']);
+        end
+    else
+        % Run NJOY.
+        Meta(m).fileStatus(4) = 0;
+
+        % Prepare.
+        for i = 1:2 % tape20 and script
+            copyfile([Meta(m).storagePath filesep fnames{i}],fnames{i});
+        end
+
+        if p.f.logResults
+            logFileStream = '>> njoy_log';
+        else
+            logFileStream = ' ';
+        end
+
+        % Call NJOY from the system.
+        if isunix
+            system(['xnjoy<script' logFileStream]);
+        elseif ispc
+            system(['njoy<script' logFileStream]);
+        end
+
+        % Clean up.
+        delete tape*
+        copyfile(fnames{3}, [Meta(m).storagePath filesep fnames{3}]);
+
+        delete(fnames{3});
+
+        if p.f.logResults == 1
+            logFilename = logFileStream(4:end);
+            copyfile(logFilename, [Meta(m).storagePath filesep ...
+                logFilename]);
+            delete(logFilename);
+        end
+
+    end
+
+    fileStatuses(m,:) = Meta(m).fileStatus;
+
+end
+
+% "getmats" bound materials EDIT.
+
+if p.verbose
+    disp('[FarmXS/Fertilize]: Leaving.');
+end
+
+end
+
+function [Meta, L] = Harvest(p, Meta)
+
+if p.verbose
+    disp('[FarmXS/Harvest]: Entering.');
+end
+
+% See assignment of p.fnames at the top of this file.
+fnames = p.fnames;
+
+mainidxs = MapZAIDs(Meta, p.ZAIDs); % Call this every time?
+
+% We know some files have issues. EDIT.
+%Errors([300 312 313]) = [1 1 1];
+libraryInitialized = 0;
+
+for m = mainidxs
+
+    fid = fopen([Meta(m).storagePath filesep fnames{3}]);
+    if Meta(m).writeStatus ~= 1
+        disp('[FarmXS/Harvest]: FLAG parse error 1');
+        % Remove bad numbers and replace with NaN. This function is Geoff's. I
+        % should incorporate it more somehow.
+        %done = findreplace(fid,{' -Inf+***'},{'NaN'});
+        done = findreplace(fid,{' NaN+***'},{'NaN'});
+        % Close all files.
+        fclose all
+        fid = fopen(['temporaryfile']); % EDIT.
+    end
+
+    while ~feof(fid)
+        fline = fgetl(fid);
+
+        if ~isempty( regexp(fline, '.***error in findf***.', 'once'))
+            % Crete a parse error log file.
+            ferrorid = fopen('PARSE_ERRORS', 'a'); % rename EDIT.
+            fprintf(ferrorid, 'NJOY output file %s is corrupted.\n',...
+                Meta(m).nuclideStr);
+            fprintf(ferrorid, '  %s\n', fline);
+            fprintf(ferrorid, '  Data$ %d %s %s\n\n',...
+                m, Meta(m).nuclideStr, Meta(m).storagePath);
+            fclose(ferrorid);
+            break; % EDIT.
+        end
+
+        if length(fline) >= 37 % 30? What is the ground for this number? EDIT.
+            % Only lines that have over a length of 37 are useful to us? What
+            % if we only ask for 1 temperature? EDIT!
+
+            % Pull data from the file.
+
+            if strcmp(fline(1:25), ' neutron group structure.')
+
+                if p.h.makeLibrary && ~libraryInitialized
+                    if ~strcmp(p.p.IGNstr,'1')
+                        % We can read in group structure.
+                        [NJOYGroupDef] = GetNJOYGroupDef(fid);
+                        p.p.groupDef = NJOYGroupDef';
+                    end
+    
+                    % Initialize library.
+                    libraryInitialized = 1;
+                    L = initLibrary(p, Meta);
+                end
+
+            elseif strcmp(fline(21:22), 't=')
+                % We can read in the current temperature.
+                temp = str2num(fline(23:31));
+                tempStr = int2str(temp);
+
+            elseif strcmp(fline(2:4), 'for')
+
+                % Read in MFMT info and get cross section data
+                MFstr = fline(10);
+                MF = str2num(MFstr);
+                MT = str2num(fline(18:20));
+                MTstr = int2str(MT);
+                MFMTstr = [MFstr ' ' MTstr];
+
+                % LIBRARY
+                if p.h.makeLibrary
+                    ZAID = Meta(m).ZAID;
+                    L.z(L.ZAID(ZAID)).isFissionable = Meta(m).isFissionable;
+                end
+
+                % ARRAY
+                arrayStr = [Meta(m).element int2str(Meta(m).atomNum) ...
+                    '_' MFstr '_' MTstr '_' tempStr];
+
+                if p.verbose
+                    fprintf('[FarmXS/Harvest]: Harvesting %s\n',...
+                        arrayStr);
+                end
+
+                [XS, S0s] = GetNJOYXS(fid);
+                
+                logS0s = log10(S0s);
+                nLogS0s = length(logS0s);
+
+                logS0strs = cell(1,nLogS0s);
+
+                for s0idx = 1:nLogS0s
+                    if logS0s(s0idx) < 0
+                        logS0strs{s0idx} = ['_m' num2str(-logS0s(s0idx))];
+                    else
+                        logS0strs{s0idx} = ['_' num2str(logS0s(s0idx))];
+                    end
+                end
+
+
+                switch MFMTstr
+                    case {'3 2', '3 4', '3 18', '3 102', '3 251', '3 452'}
+                        for s0idx = 1:nLogS0s
+                            if p.h.makeArrays
+                                eval([arrayStr logS0strs{s0idx} ...
+                                    ' = XS(:, s0idx + 1);']);
+                            end
+                            if  p.h.makeLibrary
+%                                if ...
+%    size(L.z(L.ZAID(ZAID)).m(L.MT(MT)).xs(:,L.T(temp),L.S0(logS0s(s0idx)))) ...
+%        ~= size(XS(:, s0idx + 1))
+%                disp(['ERROR [FarmXS/Harvest]: ' ...
+%                    Meta(m).nuclideStr ...
+%                    ' MF ' MFstr ' MT ' MTstr ': size error, not harvested.']);
+%                                else
+  L.z(L.ZAID(ZAID)).m(L.MT(MT)).xs(XS(:,1),L.T(temp),L.S0(logS0s(s0idx))) = ...
+      XS(:, s0idx + 1);
+%                                end
+                            end
+                        end
+
+                    case '3 1'
+                        % Lengedre order 0
+                        XSLORD0 = XS(1:4:end,:);
+                        % Legendre order 1
+                        XSLORD1 = XS(3:4:end,:);
+                        % Flux Legendre order 0
+                        FluxLORD0 = XS(2:4:end,:);
+                        % Flux Legendre order 1
+                        FluxLORD1 = XS(4:4:end,:);
+
+                        for s0idx = 1:nLogS0s
+                            if p.h.makeArrays
+                                eval([arrayStr logS0strs{s0idx} ...
+                                        ' = XSLORD0(:, s0idx + 2);']);
+                                eval([arrayStr logS0strs{s0idx} '_L1' ...
+                                        ' = XSLORD1(:, s0idx + 2);']);
+                                eval([arrayStr logS0strs{s0idx} '_F0' ...
+                                        ' = FluxLORD0(:, s0idx + 2);']);
+                                eval([arrayStr logS0strs{s0idx} '_F1' ...
+                                        ' = FluxLORD1(:, s0idx + 2);']);
+                            end
+
+                            if p.h.makeLibrary
+    L.z(L.ZAID(ZAID)).m(L.MT(MT)).xs(:,L.T(temp),L.S0(logS0s(s0idx))) = ...
+        XSLORD0(:, s0idx + 2);
+                            end
+                        end
+                        clear XSLORD0 XSLORD1 FluxLORD0 FluxLORD1;
+
+                    case '6 2' % '6 221'
+                        if XS(1,3) ~= 0
+                            disp(['ERROR [FarmXS/Harvest]: ' ...
+                                Meta(m).nuclideStr ...
+                                ' MF 6 MT 2: should use XS(i, j + 2)']);
+                        end
+
+                        % Initialize for the upcoming loop.
+                        lengthXS = length(XS);
+
+                        kernel = zeros(L.nGroups);
+                        for s0idx = 1:nLogS0s
+                            for xsidx = 1:lengthXS
+                                % kernel(i -> j)
+                                % XS's first and second columns are bin indices.
+                                kernel(XS(xsidx, 2), XS(xsidx, 1)) = ...
+                                    XS(xsidx, s0idx + 3);
+                            end
+
+                            if p.h.makeArrays
+                                eval([arrayStr logS0strs{s0idx} ...
+                                        ' = kernel;']);
+                            end
+                            if p.h.makeLibrary
+    L.z(L.ZAID(ZAID)).m(L.MT(MT)).xs(:,:,L.T(temp),L.S0(logS0s(s0idx))) = ...
+        kernel;
+                            end
+                        end
+                        clear kernel;
+
+                    case {'6 51', '6 221'} % EDIT NOT WORKING 221.
+                        [nrows, ncols] = size(XS);
+
+                        for rowidx = 1:nrows
+                            for colidx = 0:ncols - 3
+                                if XS(rowidx, colidx + 3) ~= -20
+                                kernel( XS(rowidx,2)+colidx, XS(rowidx,1)) ...
+                                        = XS(rowidx, colidx + 3);
+                                end
+                            end
+                        end
+
+                        for s0idx = 1:nLogS0s
+                            if p.h.makeArrays
+                                eval([arrayStr logS0strs{s0idx} ...
+                                    ' = kernel;']);
+                            end
+                            if p.h.makeLibrary
+    L.z(L.ZAID(ZAID)).m(L.MT(MT)).xs(:,:,L.T(temp),L.S0(logS0s(s0idx))) = ...
+        kernel;
+                            end
+
+                        end
+                        clear kernel;
+
+                        % I think something is incorrect with how this loop
+                        % works.
+                        % EDIT.
+                    otherwise
+                        disp(['ERROR [FarmXS/Harvest]: ' ...
+                            Meta(m).nuclideStr ...
+                            ' MF ' MFstr ' MT ' MTstr ...
+                            ': is not being harvested.']);
+                end % switch MFMTstr
+
+                % Call "datatypes"
+                %
+                % load CurrentMFMT
+                %
+                % COMPARE to correct for thermal region (old code)
+            end
+
+
+        end % if strcmp(fline(1:37)...
+        % end % if length(fline)...
+    end % while ~feof(fid)
+
+    fclose all;
+end % for m = mainidxs
+
+if isfield(p.h,'arrayMatName');
+    save(p.h.arrayMatName);
+end
+
+if p.verbose
+    disp('[FarmXS/Harvest]: Leaving.');
+end
+
+end % function Harvest
+
+function [NJOYGroupDef] = GetNJOYGroupDef(fid)
+
+binidx = 0;
+fline = fgetl(fid);
+while ~isempty(fline)
+    binidx = binidx + 1;
+    leftGroupBound(binidx) = str2double(fline(10:20));
+    rightGroupBound(binidx) = str2double(fline(26:36));
+
+    fline = fgetl(fid);
+end
+
+NJOYGroupDef = [leftGroupBound(1) rightGroupBound]';
+
+end
+
+
+function [XS, S0s] = GetNJOYXS(fid)
+
+% Move down enough lines to get to the header.
+while 1
+    fline = fgetl(fid);
+    if ~isempty( regexp(fline, '.infinit.', 'once')) || ...
+            ~isempty( regexp(fline, '.group  group.', 'once'))
+        % EDIT. I do not understand these conditions.
+    regexp(fline, '.infinit.', 'once')
+        disp('[FarmXS/GetNJOYXS]: Skipping a cross section. Investigate.');
+        break;
+    end
+end
+
+% Get header of the XS table for this MFMT. Put in E's into the header so the
+% header can be converted to numbers.
+fline = regexprep(regexprep(regexprep(fline, '+', 'E+'), '-', 'E-'),' E-',' -');
+% Index of where S0 numbers begin in the header.
+firstindex = regexp(fline, '[\dE.+-]+', 'once');
+% This next line assumes we are always pulling infinite dilution.
+S0s = [1e10, str2num( fline(firstindex:end))];
+% Move to the next (empty) line.
+fgetl(fid);
+
+% We do not know beforehand the number of rows for XS, unless we preparsed or
+% something. EDIT.
+
+% This line is needed to evaluate the regular expression eval below. The
+% variable flux appears amongst the total cross section data. I am not sure why
+% we don't replace this with NaN. EDIT.
+flux = -10;
+
+% Read the first line of data.
+fline = fgetl(fid);
+lineidx = 0;
+while length(fline) >= 11 && ~strcmp(fline(11), ' ')
+    % I don't know where the 11 condition comes from.
+    lineidx = lineidx + 1;
+
+%    XS(lineidx,:) = str2num(regexprep( regexprep( regexprep( fline, '+', 'E+'), '-', 'E-'), ' E-', ' -');
+    eval(['XS(lineidx,:) = [' regexprep( regexprep( regexprep( fline, ...
+            '+', 'E+'), '-', 'E-'), ' E-', ' -') '];']);
+    %{
+    eval(['tempp = [' regexprep( regexprep( regexprep( fline, ...
+            '+', 'E+'), '-', 'E-'), ' E-', ' -') '];']);
+    fline
+    ['XS(lineidx,:) = [' regexprep( regexprep( regexprep( fline, ...
+            '+', 'E+'), '-', 'E-'), ' E-', ' -') '];']
+    XS(lineidx,:)
+    tempp
+    %}
+
+    % There is a bunch of extra code here to deal with mismatched vectors, for
+    % stuff like MFMT = '6 221'. EDIT.
+
+    fline = fgetl(fid);
+
+end
+
+end
+
+
+function [isFissionable, maxInelasticMT] = GetMFMTs(storagePath, writeStatus)
+% Geoff's scripts have some valuable comments for here.
+
+if writeStatus == 0
+    isFissionable = 0;
+    maxInelasticMT = 0;
+    disp(['WARNING [FarmXS/GetMFMTs]: No tape20 at ' storagePath]);
+
+else
+    fid = fopen(fullfile(storagePath,'tape20'));
+
+    % Move to the second line of the file.
+    fgetl(fid);
+    fline = fgetl(fid);
+
+    % Obtain ZAID from second line of file. EDIT should compare to the ZAID
+    % grabbed in Explore.
+    % ZAID = str2num([fline(2:9) 'E' fline(10:11)]);
+    % atomMass = str2num([fline(13:20) 'E' fline(21:22)]);
+
+    % Store all the MTs that are found.
+    MTs = [];
+    runLoop = 1;
+    while ~feof(fid) && runLoop
+        fline = fgetl(fid);
+
+        if ~strcmp( fline(73:75), '451')
+
+            while runLoop
+                fline = fgetl(fid);
+
+                MF = str2num(fline(72));
+                MT = str2num(fline(73:75));
+
+                % Only consider scattering.
+                if MF == 3
+                    if MT >= 91
+                        % Looked far enough.
+                        runLoop = 0;
+                    end
+
+                    if ~sum(MT == MTs)
+                        % If we have this MT already, move on. If not, collect
+                        % it.
+                        MTs = [MTs, MT];
+                    end
+                elseif length(MTs) > 2
+                    runLoop = 0;
+                    disp(['[FarmXS/GetMFMTs]: Not many MTs found,'...
+                        ' break from MF ~= 3 for ' storagePath]);
+                end
+            end
+        end
+    end
+
+fclose(fid);
+
+isFissionable = sum(18 == MTs);
+maxInelasticMT = max(MTs);
+
+end
+
+end
+
+function matidxs = MapZAIDs(Meta, ZAIDs)
+
+nZAIDs = length(ZAIDs);
+AllZAIDs = zeros(nZAIDs,1);
+
+for m = 1:length(Meta)
+    AllZAIDs(m) = Meta(m).ZAID;
+    % check for uniqueness of ZAID inputs?
+end
+
+for z = 1:nZAIDs
+    matidxs(z) = find(AllZAIDs == ZAIDs(z));
+end
+
+end
+
+function L = initLibrary(p, Meta)
+
+ZAIDs = p.ZAIDs; %[1001 8016 11023 92235 92238 222];
+MTs = [p.p.MFMTs(:,2)' 6 7 8 9]; %[1 2 4 6 7 8 9 18 102 221 251 452];
+Ts = [300 600 900 1200 1500];
+S0s = [-1 0 1 2 3 5 10];
+
+L = struct('groupDef',p.p.groupDef,...
+           'nGroups',length(p.p.groupDef)-1,...
+           'ZAIDs',ZAIDs,...
+           'MTs',MTs,...
+           'Ts',Ts,...
+           'S0s',S0s,...
+           'ZAID',[],...
+           'MT',[],...
+           'T',[],...
+           'S0',[],...
+           'z',struct('isFissionable',[],...
+                      'm',struct('hasResonances',[],...
+                                 'xs',[])));
+
+L.ZAID(ZAIDs) = 1:length(ZAIDs);
+L.MT(MTs) = 1:length(MTs);
+L.T(Ts) = 1:length(Ts);
+L.S0 = containers.Map({-1 0 1 2 3 5 10},{1 2 3 4 5 6 7});
+
+L.ZAID = sparse(L.ZAID);
+L.MT = sparse(L.MT);
+L.T = sparse(L.T);
+nTs = length(Ts);
+nS0s = length(S0s);
+
+for i = ZAIDs
+    L.z(L.ZAID(i)).isFissionable = 0;
+    for j = MTs
+        L.z(L.ZAID(i)).m(L.MT(j)).hasResonances = 1;
+        if j == 2 || j == 221
+            L.z(L.ZAID(i)).m(L.MT(j)).xs = ...
+                zeros(L.nGroups,L.nGroups,nTs,nS0s);
+        elseif j == 452
+        % THIS IS TEMPORARY, SINCE ANDY DOES NOT STORE 452
+            L.z(L.ZAID(i)).m(L.MT(j)).xs = ones(L.nGroups,nTs,nS0s);
+        else
+            L.z(L.ZAID(i)).m(L.MT(j)).xs = zeros(L.nGroups,nTs,nS0s);
+        end
+    end
+end
+end
+
+
+% TRASH 
+%% MFMT for all files.
+%        MFMTall = [3 1;
+%                   6 2;
+%                   3 102;
+%                   3 251];
+%                 % 3 2;
+%
+%        % MFMT at high temp. EDIT should this be max(nGroups) or max(groupDef)?
+%        if max(p.p.groupDef) < 1000
+%            MFMThightemp = [];
+%        else
+%            MFMThightemp = [3 4];
+%        end
+%
+%        % MFMT at low temp only. EDIT same as previous
+%        if min(p.p.groupDef) > 10
+%            MFMTlowtemp = [];
+%        else
+%            MFMTlowtemp = [3 221;
+%                           6 221;
+%                           3 222;
+%                           6 222];
+%        end
+%
+%        % MFMT related to fission.
+%        if Meta(m).isFissionable
+%            MFMTfiss = [3 18;
+%                        3 452];
+%                      % 6 18;
+%        else
+%            MFMTfiss = [];
+%        end
+%
+%        % Combine everything
+%        MFMTs = [MFMTall;
+%                 MFMThightemp;
+%                 MFMTlowtemp;
+%                 MFMTfiss];

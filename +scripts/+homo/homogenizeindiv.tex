@@ -1,0 +1,120 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath}
+\newcommand{\pito}[2]{\Pi^{#1 \gets #2}}
+
+\begin{document}
+\title{VBUDSII: The second "individual" homogenization approach.}
+\author{Chris Dembia}
+\date{\today}
+
+\maketitle
+
+This document presents the formulation for the second homogenization approach
+for VBUDSII. This method has been developed because the original formulation
+described in the MS thesis by Chris Dembia does not yield sufficiently
+accurate results. The first homogenization formulation is described in Dembia's
+thesis.
+
+The method is presented for a four-cell implementation. The four cells are:
+
+\begin{enumerate}
+\item AA: cell pair A, antipin (e.g. UOX fuel).
+\item AP: cell pair A, pin (e.g. UOX's coolant).
+\item BA: cell pair B, anitpin (e.g. IMF fuel).
+\item BP: cell pair B, pin (e.g. IMF's coolant).
+\end{enumerate}
+
+We obtain a mean free path in each cell as a function of energy group:
+
+\begin{align}
+\lambda^{AA}(E) = 1/\Sigma_{t}^{AA}(E) \\
+\lambda^{AP}(E) = 1/\Sigma_{t}^{AP}(E) \\
+\lambda^{BA}(E) = 1/\Sigma_{t}^{BA}(E) \\
+\lambda^{BP}(E) = 1/\Sigma_{t}^{BP}(E)
+\end{align}
+
+We use these mean free paths to obtain the homogenization parameter in each
+cell for each energy group.
+
+\begin{align}
+    h^{AA} = h(\lambda^{AA}(E)) \\
+    h^{AP} = h(\lambda^{AP}(E))  \\
+    h^{BA} = h(\lambda^{BA}(E))  \\
+    h^{BP} = h(\lambda^{BP}(E)) 
+\end{align}
+
+where $h(\lambda)$ is given by:
+
+\begin{equation}
+    h(\lambda) = \frac{1}{2}\left(1 + \mbox{erf}{[k(\lambda -
+    \lambda^h)]}\right)
+\end{equation}
+
+\noindent but could be given by a similar expression. The quantities $k$
+and $\lambda^h$ are parameters that the user can change; $\lambda^h$ should be
+set to some characteristic dimension of the cell and there is little to be
+said as of yet about how $k$ should be chosen. The value of $h$ is always less
+than or equal to 1.
+
+In each column of the $\mathbf{\Pi}$ matrix, two terms represent probabilities of
+remaining in the cell pair, and two represent probabilities of moving to the
+other cell pair. The latter of these two, in each column, are scaled down by
+the factor $h$.
+
+The $\mathbf{\Pi}$ matrix has the following form:
+
+\begin{align}
+    \mathbf{\Pi} = 
+    \begin{bmatrix}
+        \pito{AA}{AA} & \mathbf{\pito{AA}{BA}} & \pito{AA}{AP} &
+        \mathbf{\pito{AA}{BP}} \\
+        \mathbf{\pito{BA}{AA}} & \pito{BA}{BA} & \mathbf{\pito{BA}{AP}} & \pito{BA}{BP} \\
+        \pito{AP}{AA} & \mathbf{\pito{AP}{BA}} & \pito{AP}{AP} &
+        \mathbf{\pito{AP}{BP}} \\
+        \mathbf{\pito{BP}{AA}} & \pito{BP}{BA} & \mathbf{\pito{BP}{AP}} & \pito{BP}{BP} \\
+    \end{bmatrix}
+\end{align}
+
+The entries representing out-of-pair transport are emboldened, and it is these
+quantities that are reduced by the appropriate $h$. This introduces the issue
+that the columns of the matrix no longer sum to 1. This is managed by scaling the
+remaining two terms in each column by a single factor that brings the sum back
+t 1. For the first column, we have:
+
+\begin{equation}
+    \gamma (\pito{AA}{AA} + \pito{AP}{AA}) + h(\pito{BA}{AA} + \pito{BP}{AA}) =
+    1
+\end{equation}
+
+so that $\gamma$ is given by:
+
+\begin{equation}
+    \gamma  = \frac{1 - h(\pito{BA}{AA} + \pito{BP}{AA})}{\pito{AA}{AA} +
+    \pito{AP}{AA}}
+\end{equation}
+
+The final form of the $\mathbf{\Pi}$ matrix is then:
+
+\begin{align}
+    \mathbf{\Pi} = 
+    \begin{bmatrix}
+        \gamma^{AA}\pito{AA}{AA} & h^{BA}\mathbf{\pito{AA}{BA}} & \gamma^{AP}\pito{AA}{AP} &
+        h^{BP}\mathbf{\pito{AA}{BP}} \\
+        h^{AA}\mathbf{\pito{BA}{AA}} & \gamma^{BA}\pito{BA}{BA} &
+        h^{AP}\mathbf{\pito{BA}{AP}} & \gamma^{BP}\pito{BA}{BP} \\
+        \gamma^{AA}\pito{AP}{AA} & h^{BA}\mathbf{\pito{AP}{BA}} & \gamma^{AP}\pito{AP}{AP} &
+        h^{BP}\mathbf{\pito{AP}{BP}} \\
+        h^{AA}\mathbf{\pito{BP}{AA}} & \gamma^{BA}\pito{BP}{BA} &
+        h^{AP}\mathbf{\pito{BP}{AP}} & \gamma^{BP}\pito{BP}{BP} \\
+    \end{bmatrix}
+\end{align}
+
+
+
+
+
+
+
+\end{document}
+

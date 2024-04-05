@@ -1,0 +1,8 @@
+NJOY output file O_16 is corrupted.
+   ***error in findf*** mat 825 mf 4 mt 91 not on tape  12
+  Data$ 14 O_16 /home/fitze/LANL/XSFarmSerpentFast/O_16
+
+NJOY output file U_235 is corrupted.
+   ***error in findf*** mat9228 mf 4 mt 91 not on tape  12
+  Data$ 294 U_235 /home/fitze/LANL/XSFarmSerpentFast/U_235
+

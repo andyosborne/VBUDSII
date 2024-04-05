@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[left=.1in,right=.1in,top=.1in,bottom=.1in]{geometry}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\setlength{\pdfpageheight}{5in}
+\setlength{\pdfpagewidth}{7in}
+\begin{document}
+\pgfplotstabletypeset[
+col sep=&, row sep=\\, 
+every head row/.style={before row=\hline, after row=\hline\hline},
+every last row/.style={after row=\hline},
+every first column/.style={
+column type/.add={|}{}
+},
+every last column/.style={
+column type/.add={}{|}
+},
+]
+{
+cell & ZAID & MT & XS error 1 & XS error 2 & XS error 3 & VBUDSII RR & MCNPX RR & RR error \\ 
+1 & 222 & 7 & 1.525e+00 & NaN & NaN & 4.802e+00 & 2.093e+00 & 1.294e+00\\ 
+1 & 222 & 2 & 1.528e+00 & NaN & NaN & 4.792e+00 & 2.087e+00 & 1.296e+00\\ 
+1 & 222 & 102 & 9.019e-01 & NaN & NaN & 9.914e-03 & 5.732e-03 & 7.296e-01\\ 
+2 & 92235 & 7 & 1.799e-02 & NaN & NaN & 1.027e+01 & 1.110e+01 & 7.449e-02\\ 
+2 & 92235 & 2 & 7.523e-02 & NaN & NaN & 1.100e+00 & 1.116e+00 & 1.509e-02\\ 
+2 & 92235 & 102 & 2.768e-02 & NaN & NaN & 1.575e+00 & 1.676e+00 & 6.042e-02\\ 
+2 & 92235 & 18 & 1.780e-02 & NaN & NaN & 7.597e+00 & 8.205e+00 & 7.415e-02\\ 
+2 & 92238 & 7 & 3.762e-02 & NaN & NaN & 1.154e+00 & 1.338e+00 & 1.375e-01\\ 
+2 & 92238 & 2 & 1.087e-01 & NaN & NaN & 1.039e+00 & 1.082e+00 & 3.999e-02\\ 
+2 & 92238 & 102 & 9.279e-02 & NaN & NaN & 1.084e-01 & 1.138e-01 & 4.751e-02\\ 
+2 & 92238 & 18 & 4.351e-01 & NaN & NaN & 6.347e-03 & 1.226e-02 & 4.824e-01\\ 
+2 & 8016 & 7 & 8.094e-03 & NaN & NaN & 3.779e-01 & 4.300e-01 & 1.210e-01\\ 
+2 & 8016 & 2 & 1.159e-02 & NaN & NaN & 3.779e-01 & 4.295e-01 & 1.201e-01\\ 
+2 & 8016 & 102 & 1.107e-02 & NaN & NaN & 2.642e-06 & 2.779e-06 & 4.928e-02\\ 
+}
+\end{document}

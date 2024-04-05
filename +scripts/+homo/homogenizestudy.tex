@@ -1,0 +1,43 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage{graphicx}
+\usepackage[left=.5in,right=.5in,top=1in,bottom=1in]{geometry}
+\usepackage{caption}
+\usepackage[pdfborder={0 0 0},colorlinks={true},citecolor=red,linkbordercolor={0 0 0},linkcolor=blue]{hyperref}
+\newcommand{\fitzefigtwo}[3]{\begin{center}
+\includegraphics{#1}\captionof{figure}[#2]{#2. #3}\label{fig:#1}
+\end{center}}
+\begin{document}
+\title{homogenizestudy}
+\date{\today}
+\author{Chris Dembia}
+\maketitle
+Blue lines: MCNPX. Green lines: VBUDSII.
+
+\listoffigures
+\fitzefigtwo{homogenizestudyequi}{Both fuel pins are the same enriched UOX. Method unmodified.}{ }
+
+\fitzefigtwo{homogenizestudypure}{THERMAL 1. Pin 1: 3\% enriched UOX, Pin 2: 0\% enriched UOX. Method unmodified. }{ }
+
+\fitzefigtwo{homogenizestudypureorig}{THERMAL 1. Pin 1: 3\% enriched UOX, Pin 2: 0\% enriched UOX. Homogeneity: original scheme. }{ In this method, a single homogenization factor is used for all cells. The multiplication factor is slightly better using this simple homogeneity method, but the thermal peak in the pure UO2 moderator increases, whereas it had been correct before using homogenization.}
+
+\fitzefigtwo{homogenizestudypureindiv}{THERMAL 1. Pin 1: 3\% enriched UOX, Pin 2: 0\% enriched UOX. Homogeneity: 2nd 'indiv' scheme. }{ In this case, each cell has its own homogenization factor, and the resulting PI is obtained in a mannner different than that used for Figure 3. The multiplication factor is worse than for the simple homogeneity method, but the flux in the pure UOX thermal now again matches the MCNPX result (as it did when not doing homogenization). Note that this output was generated using the two parameters for homogeneity that yielded the least error.}
+
+\fitzefigtwo{homogenizestudyimf}{THERMAL 2. Pin 1: 3\% enriched UOX, Pin 2: IMF. Method unmodified. }{ }
+
+\fitzefigtwo{homogenizestudyimforig}{THERMAL 2. Pin 1: 3\% enriched UOX, Pin 2: IMF. Homogeneity: original scheme. }{ Again, one homogenization factor is used for all cells. The multiplication factor improves, but the flux does not change.}
+
+\fitzefigtwo{homogenizestudyimfindiv}{THERMAL 2. Pin 1: 3\% enriched UOX, Pin 2: IMF. Homogeneity: 2nd 'indiv' scheme. }{ Multiplication factor gets worse and the flux does not improve. Note that this output was generated using the two parameters for homogeneity that yielded the least error.}
+
+\fitzefigtwo{homogenizestudyfast}{FAST 1. Pin 1: 24\% enriched UOX, Pin 2: 12\% enriched UOXMethod unmodified. }{ }
+
+\fitzefigtwo{homogenizestudyfastorig}{FAST 1. Pin 1: 24\% enriched UOX, Pin 2: 12\% enriched UOXHomogeneity: original scheme. }{ As expected, homogeneity has no appreciable effect on fast reactor results.}
+
+\fitzefigtwo{homogenizestudyfastindiv}{FAST 1. Pin 1: 24\% enriched UOX, Pin 2: 12\% enriched UOXHomogeneity: 2nd 'indiv' scheme. }{ }
+
+\fitzefigtwo{homogenizestudypufast}{FAST 2. Pin 1: 24\% enriched UOX, Pin 2: Pu(239)O2. Method unmodified. }{ }
+
+\fitzefigtwo{homogenizestudypufastorig}{FAST 2. Pin 1: 24\% enriched UOX, Pin 2: Pu(239)O2. Homogeneity: original scheme. }{ }
+
+\fitzefigtwo{homogenizestudypufastindiv}{FAST 2. Pin 1: 24\% enriched UOX, Pin 2: Pu(239)O2. Homogeneity: 2nd 'indiv' scheme. }{ }
+
+\end{document}

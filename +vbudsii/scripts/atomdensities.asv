@@ -1,0 +1,17 @@
+function atomdensities
+
+enrichment = .032;
+M_U235 = 235.0439299; % g/mol
+M_U238 = 238.0507882; % g/mol
+M_O16 = 15.9994; % g/mol
+M_H1 = 1.00782503207; % g/mol
+
+N = .60221415; % cm^2/b/mol
+
+rho_H2O = .72; % g/cm^3
+rho_UO2 = 11; % g/cm^3
+
+M_U = (enrichment/M_U235 + (1-enrichment)/M_U238)^(-1);
+
+rho_U235 = M_U235/(M_U + 2*M_O16);
+

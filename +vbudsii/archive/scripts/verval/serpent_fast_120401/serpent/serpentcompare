@@ -1,0 +1,157 @@
+set title "serpentcompare, created 20120424T214950"
+set acelib "/home/fitze/LANL/SERPENT/sss_jeff311u.xsdata"
+mat UO2 -1.100000e+01
+92235.09c 6.299922e-03
+92238.09c 1.830915e-02
+8016.09c 4.921814e-02
+
+mat Na -8.820000e-01
+11023.06c 2.311138e-02
+set bc 3
+set gcu 0
+set sym 8
+set nfg 110 1.25893e-10 1.58489e-10 1.99526e-10 2.51189e-10 3.16228e-10 3.98107e-10 5.01187e-10 6.30957e-10 7.94328e-10 1.00000e-09 1.25893e-09 1.58489e-09 1.99526e-09 2.51189e-09 3.16228e-09 3.98107e-09 5.01187e-09 6.30957e-09 7.94328e-09 1.00000e-08 1.25893e-08 1.58489e-08 1.99526e-08 2.51189e-08 3.16228e-08 3.98107e-08 5.01187e-08 6.30957e-08 7.94328e-08 1.00000e-07 1.25893e-07 1.58489e-07 1.99526e-07 2.51189e-07 3.16228e-07 3.98107e-07 5.01187e-07 6.30957e-07 7.94328e-07 1.00000e-06 1.25893e-06 1.58489e-06 1.99526e-06 2.51189e-06 3.16228e-06 3.98107e-06 5.01187e-06 6.30957e-06 7.94328e-06 1.00000e-05 1.25893e-05 1.58489e-05 1.99526e-05 2.51189e-05 3.16228e-05 3.98107e-05 5.01187e-05 6.30957e-05 7.94328e-05 1.00000e-04 1.25893e-04 1.58489e-04 1.99526e-04 2.51189e-04 3.16228e-04 3.98107e-04 5.01187e-04 6.30957e-04 7.94328e-04 1.00000e-03 1.25893e-03 1.58489e-03 1.99526e-03 2.51189e-03 3.16228e-03 3.98107e-03 5.01187e-03 6.30957e-03 7.94328e-03 1.00000e-02 1.25893e-02 1.58489e-02 1.99526e-02 2.51189e-02 3.16228e-02 3.98107e-02 5.01187e-02 6.30957e-02 7.94328e-02 1.00000e-01 1.25893e-01 1.58489e-01 1.99526e-01 2.51189e-01 3.16228e-01 3.98107e-01 5.01187e-01 6.30957e-01 7.94328e-01 1.00000e+00 1.25893e+00 1.58489e+00 1.99526e+00 2.51189e+00 3.16228e+00 3.98107e+00 5.01187e+00 6.30957e+00 7.94328e+00 
+set pop 2000 500 20
+pin 1
+UO2 6.8637e-01
+Na
+surf 1000 sqc 0.0  0.0  1.0000e+00
+
+cell 100 0 fill 1 -1000
+cell 101 0 outside 1000
+plot 3 500 500
+mesh 3 500 500
+set xsplot 110 1e-10 10
+ene egrid 3 110 1e-10 10
+det fuel dm UO2 de egrid
+det coolant dm Na de egrid
+mat 11023 1.0 11023.06c 1.0
+mat 92235 1.0 92235.09c 1.0
+mat 92238 1.0 92238.09c 1.0
+mat 8016 1.0 8016.09c 1.0
+det cNaz11023m1 dm Na de egrid dr 1 11023 dt 3 coolant
+det cNaz11023m2 dm Na de egrid dr 2 11023 dt 3 coolant
+det cNaz11023m51 dm Na de egrid dr 51 11023 dt 3 coolant
+det cNaz11023m52 dm Na de egrid dr 52 11023 dt 3 coolant
+det cNaz11023m53 dm Na de egrid dr 53 11023 dt 3 coolant
+det cNaz11023m54 dm Na de egrid dr 54 11023 dt 3 coolant
+det cNaz11023m55 dm Na de egrid dr 55 11023 dt 3 coolant
+det cNaz11023m56 dm Na de egrid dr 56 11023 dt 3 coolant
+det cNaz11023m57 dm Na de egrid dr 57 11023 dt 3 coolant
+det cNaz11023m58 dm Na de egrid dr 58 11023 dt 3 coolant
+det cNaz11023m59 dm Na de egrid dr 59 11023 dt 3 coolant
+det cNaz11023m60 dm Na de egrid dr 60 11023 dt 3 coolant
+det cNaz11023m61 dm Na de egrid dr 61 11023 dt 3 coolant
+det cNaz11023m62 dm Na de egrid dr 62 11023 dt 3 coolant
+det cNaz11023m63 dm Na de egrid dr 63 11023 dt 3 coolant
+det cNaz11023m64 dm Na de egrid dr 64 11023 dt 3 coolant
+det cNaz11023m65 dm Na de egrid dr 65 11023 dt 3 coolant
+det cNaz11023m66 dm Na de egrid dr 66 11023 dt 3 coolant
+det cNaz11023m67 dm Na de egrid dr 67 11023 dt 3 coolant
+det cNaz11023m68 dm Na de egrid dr 68 11023 dt 3 coolant
+det cNaz11023m69 dm Na de egrid dr 69 11023 dt 3 coolant
+det cNaz11023m70 dm Na de egrid dr 70 11023 dt 3 coolant
+det cNaz11023m71 dm Na de egrid dr 71 11023 dt 3 coolant
+det cNaz11023m72 dm Na de egrid dr 72 11023 dt 3 coolant
+det cNaz11023m73 dm Na de egrid dr 73 11023 dt 3 coolant
+det cNaz11023m74 dm Na de egrid dr 74 11023 dt 3 coolant
+det cNaz11023m75 dm Na de egrid dr 75 11023 dt 3 coolant
+det cNaz11023m76 dm Na de egrid dr 76 11023 dt 3 coolant
+det cNaz11023m77 dm Na de egrid dr 77 11023 dt 3 coolant
+det cNaz11023m91 dm Na de egrid dr 91 11023 dt 3 coolant
+det cNaz11023m102 dm Na de egrid dr 102 11023 dt 3 coolant
+det cUO2z92235m1 dm UO2 de egrid dr 1 92235 dt 3 fuel
+det cUO2z92235m2 dm UO2 de egrid dr 2 92235 dt 3 fuel
+det cUO2z92235m18 dm UO2 de egrid dr 18 92235 dt 3 fuel
+det cUO2z92235m51 dm UO2 de egrid dr 51 92235 dt 3 fuel
+det cUO2z92235m52 dm UO2 de egrid dr 52 92235 dt 3 fuel
+det cUO2z92235m53 dm UO2 de egrid dr 53 92235 dt 3 fuel
+det cUO2z92235m54 dm UO2 de egrid dr 54 92235 dt 3 fuel
+det cUO2z92235m55 dm UO2 de egrid dr 55 92235 dt 3 fuel
+det cUO2z92235m56 dm UO2 de egrid dr 56 92235 dt 3 fuel
+det cUO2z92235m57 dm UO2 de egrid dr 57 92235 dt 3 fuel
+det cUO2z92235m58 dm UO2 de egrid dr 58 92235 dt 3 fuel
+det cUO2z92235m59 dm UO2 de egrid dr 59 92235 dt 3 fuel
+det cUO2z92235m60 dm UO2 de egrid dr 60 92235 dt 3 fuel
+det cUO2z92235m61 dm UO2 de egrid dr 61 92235 dt 3 fuel
+det cUO2z92235m62 dm UO2 de egrid dr 62 92235 dt 3 fuel
+det cUO2z92235m63 dm UO2 de egrid dr 63 92235 dt 3 fuel
+det cUO2z92235m64 dm UO2 de egrid dr 64 92235 dt 3 fuel
+det cUO2z92235m65 dm UO2 de egrid dr 65 92235 dt 3 fuel
+det cUO2z92235m66 dm UO2 de egrid dr 66 92235 dt 3 fuel
+det cUO2z92235m67 dm UO2 de egrid dr 67 92235 dt 3 fuel
+det cUO2z92235m68 dm UO2 de egrid dr 68 92235 dt 3 fuel
+det cUO2z92235m69 dm UO2 de egrid dr 69 92235 dt 3 fuel
+det cUO2z92235m70 dm UO2 de egrid dr 70 92235 dt 3 fuel
+det cUO2z92235m71 dm UO2 de egrid dr 71 92235 dt 3 fuel
+det cUO2z92235m72 dm UO2 de egrid dr 72 92235 dt 3 fuel
+det cUO2z92235m73 dm UO2 de egrid dr 73 92235 dt 3 fuel
+det cUO2z92235m74 dm UO2 de egrid dr 74 92235 dt 3 fuel
+det cUO2z92235m75 dm UO2 de egrid dr 75 92235 dt 3 fuel
+det cUO2z92235m76 dm UO2 de egrid dr 76 92235 dt 3 fuel
+det cUO2z92235m77 dm UO2 de egrid dr 77 92235 dt 3 fuel
+det cUO2z92235m78 dm UO2 de egrid dr 78 92235 dt 3 fuel
+det cUO2z92235m79 dm UO2 de egrid dr 79 92235 dt 3 fuel
+det cUO2z92235m80 dm UO2 de egrid dr 80 92235 dt 3 fuel
+det cUO2z92235m81 dm UO2 de egrid dr 81 92235 dt 3 fuel
+det cUO2z92235m82 dm UO2 de egrid dr 82 92235 dt 3 fuel
+det cUO2z92235m83 dm UO2 de egrid dr 83 92235 dt 3 fuel
+det cUO2z92235m84 dm UO2 de egrid dr 84 92235 dt 3 fuel
+det cUO2z92235m91 dm UO2 de egrid dr 91 92235 dt 3 fuel
+det cUO2z92235m102 dm UO2 de egrid dr 102 92235 dt 3 fuel
+det cUO2z92238m1 dm UO2 de egrid dr 1 92238 dt 3 fuel
+det cUO2z92238m2 dm UO2 de egrid dr 2 92238 dt 3 fuel
+det cUO2z92238m18 dm UO2 de egrid dr 18 92238 dt 3 fuel
+det cUO2z92238m51 dm UO2 de egrid dr 51 92238 dt 3 fuel
+det cUO2z92238m52 dm UO2 de egrid dr 52 92238 dt 3 fuel
+det cUO2z92238m53 dm UO2 de egrid dr 53 92238 dt 3 fuel
+det cUO2z92238m54 dm UO2 de egrid dr 54 92238 dt 3 fuel
+det cUO2z92238m55 dm UO2 de egrid dr 55 92238 dt 3 fuel
+det cUO2z92238m56 dm UO2 de egrid dr 56 92238 dt 3 fuel
+det cUO2z92238m57 dm UO2 de egrid dr 57 92238 dt 3 fuel
+det cUO2z92238m58 dm UO2 de egrid dr 58 92238 dt 3 fuel
+det cUO2z92238m59 dm UO2 de egrid dr 59 92238 dt 3 fuel
+det cUO2z92238m60 dm UO2 de egrid dr 60 92238 dt 3 fuel
+det cUO2z92238m61 dm UO2 de egrid dr 61 92238 dt 3 fuel
+det cUO2z92238m62 dm UO2 de egrid dr 62 92238 dt 3 fuel
+det cUO2z92238m63 dm UO2 de egrid dr 63 92238 dt 3 fuel
+det cUO2z92238m64 dm UO2 de egrid dr 64 92238 dt 3 fuel
+det cUO2z92238m65 dm UO2 de egrid dr 65 92238 dt 3 fuel
+det cUO2z92238m66 dm UO2 de egrid dr 66 92238 dt 3 fuel
+det cUO2z92238m67 dm UO2 de egrid dr 67 92238 dt 3 fuel
+det cUO2z92238m68 dm UO2 de egrid dr 68 92238 dt 3 fuel
+det cUO2z92238m69 dm UO2 de egrid dr 69 92238 dt 3 fuel
+det cUO2z92238m70 dm UO2 de egrid dr 70 92238 dt 3 fuel
+det cUO2z92238m71 dm UO2 de egrid dr 71 92238 dt 3 fuel
+det cUO2z92238m72 dm UO2 de egrid dr 72 92238 dt 3 fuel
+det cUO2z92238m73 dm UO2 de egrid dr 73 92238 dt 3 fuel
+det cUO2z92238m74 dm UO2 de egrid dr 74 92238 dt 3 fuel
+det cUO2z92238m75 dm UO2 de egrid dr 75 92238 dt 3 fuel
+det cUO2z92238m76 dm UO2 de egrid dr 76 92238 dt 3 fuel
+det cUO2z92238m77 dm UO2 de egrid dr 77 92238 dt 3 fuel
+det cUO2z92238m78 dm UO2 de egrid dr 78 92238 dt 3 fuel
+det cUO2z92238m79 dm UO2 de egrid dr 79 92238 dt 3 fuel
+det cUO2z92238m80 dm UO2 de egrid dr 80 92238 dt 3 fuel
+det cUO2z92238m81 dm UO2 de egrid dr 81 92238 dt 3 fuel
+det cUO2z92238m82 dm UO2 de egrid dr 82 92238 dt 3 fuel
+det cUO2z92238m83 dm UO2 de egrid dr 83 92238 dt 3 fuel
+det cUO2z92238m84 dm UO2 de egrid dr 84 92238 dt 3 fuel
+det cUO2z92238m85 dm UO2 de egrid dr 85 92238 dt 3 fuel
+det cUO2z92238m86 dm UO2 de egrid dr 86 92238 dt 3 fuel
+det cUO2z92238m87 dm UO2 de egrid dr 87 92238 dt 3 fuel
+det cUO2z92238m88 dm UO2 de egrid dr 88 92238 dt 3 fuel
+det cUO2z92238m89 dm UO2 de egrid dr 89 92238 dt 3 fuel
+det cUO2z92238m90 dm UO2 de egrid dr 90 92238 dt 3 fuel
+det cUO2z92238m91 dm UO2 de egrid dr 91 92238 dt 3 fuel
+det cUO2z92238m102 dm UO2 de egrid dr 102 92238 dt 3 fuel
+det cUO2z8016m1 dm UO2 de egrid dr 1 8016 dt 3 fuel
+det cUO2z8016m2 dm UO2 de egrid dr 2 8016 dt 3 fuel
+det cUO2z8016m51 dm UO2 de egrid dr 51 8016 dt 3 fuel
+det cUO2z8016m52 dm UO2 de egrid dr 52 8016 dt 3 fuel
+det cUO2z8016m53 dm UO2 de egrid dr 53 8016 dt 3 fuel
+det cUO2z8016m54 dm UO2 de egrid dr 54 8016 dt 3 fuel
+det cUO2z8016m55 dm UO2 de egrid dr 55 8016 dt 3 fuel
+det cUO2z8016m56 dm UO2 de egrid dr 56 8016 dt 3 fuel
+det cUO2z8016m57 dm UO2 de egrid dr 57 8016 dt 3 fuel
+det cUO2z8016m91 dm UO2 de egrid dr 91 8016 dt 3 fuel
+det cUO2z8016m102 dm UO2 de egrid dr 102 8016 dt 3 fuel

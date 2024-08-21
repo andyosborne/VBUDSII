@@ -1,4 +1,4 @@
-function [L, p, g, Region, fissionSpectrum] = Preprocessor(p, g)
+function [L, p, g, Region, fissionSpectrum] = Preprocessor(p, g, varargin)
 %
 %VBUDSII/PREPROCESSOR/PREPROCESSOR Performs error checking on user input, and
 % initializes/creates data structures Region, L, and the fission neutron
@@ -58,7 +58,7 @@ S = dbstack('-completenames');
 vbudsiiroot = fileparts(S(1).file);
 
 % Make cross section library L, based on user input p.makeLibrary.
-if p.makeLibrary == 0
+if p.makeLibrary == 0 & isempty(varargin{1})
 
     % Load L generated from NJOY scripts.
     load(fullfile(vbudsiiroot, '+data', p.XSLibraryMAT));
@@ -83,7 +83,8 @@ elseif p.makeLibrary == 1
     L = dataprocessing.MakeLibrary(p);
     % TODO should only save this if the user asks to save it.
     save(fullfile(vbudsiiroot, '+data', p.XSLibraryMAT), 'L', '-v7.3');
-
+elseif ~isempty(varargin{1})
+    L = varargin{1};
 end
 
 %% ERROR CHECKING

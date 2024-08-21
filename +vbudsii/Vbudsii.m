@@ -1,4 +1,4 @@
-function [Results, p, g, L] = Vbudsii(p, g)
+function [Results, p, g, L] = Vbudsii(p, g, varargin)
 %
 %VBUDSII/MAIN Run VBUDSII. This functiom must be in the root directory of
 % VBUDS. The intended use of VBUDSII is to write a MATLAB script that defines
@@ -89,7 +89,11 @@ end
 
 % Initialize runtime data structure Region, and call MAKELIBRARY.
 %disp(p)
-[L, p, g, Region, fissionSpectrum] = Preprocessor(p,g);
+if(~isempty(varargin))
+    [L, p, g, Region, fissionSpectrum] = Preprocessor(p,g,varargin{1});
+else
+    [L, p, g, Region, fissionSpectrum] = Preprocessor(p,g);
+end
 
 for timeidx = 1:p.nTimeSteps
     % For each burnup/time step.
